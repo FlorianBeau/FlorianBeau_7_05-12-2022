@@ -1,13 +1,12 @@
 import React from "react";
-import Logo from "../components/Logo";
 import Header from "../components/Header";
-
+import Banner from "../components/Banner";
+import BannerImage from "../assets/LOGO.png";
 const Home = () => {
   return (
     <div>
-      <Logo />
       <Header />
-      <h1>ACCUEIL</h1>
+      <Banner imageSrc={BannerImage} title="Chez vous, partout et ailleurs" />
     </div>
   );
 };
