@@ -1,11 +1,13 @@
 import React from "react";
-import Logo from "../components/Logo";
-import Navigation from "../components/Header";
+import Banner from "../components/Banner";
+import Header from "../components/Header";
+import BannerImage from "../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png";
+
 const About = () => {
   return (
     <div>
-      <Logo />
-      <Navigation />
+      <Header underlined={"about"} />
+      <Banner imageSrc={BannerImage} title="" />
       <h1>A propos</h1>
       <br />
     </div>

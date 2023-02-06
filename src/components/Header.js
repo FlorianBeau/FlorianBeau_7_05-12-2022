@@ -1,19 +1,28 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo.js";
+import "../styles/styleHeader.sass";
 
-const Header = () => {
+const Header = ({ underlined }) => {
+  const selectedStyle = { borderBottom: "2px red solid" };
+  const notSelectedStyle = { borderBottom: "0" };
   return (
-    <div className="header">
+    <div className="HeaderContainer">
       <Logo />
-      <ul>
-        <li>
-          <NavLink to="/">Accueil</NavLink>
-        </li>
-        <li>
-          <NavLink to="/A_propos">A propos</NavLink>
-        </li>
-      </ul>
+      <div className="HeaderNavLink">
+        <NavLink
+          to="/"
+          style={underlined === "home" ? selectedStyle : notSelectedStyle}
+        >
+          Accueil
+        </NavLink>
+        <NavLink
+          to="/A_propos"
+          style={underlined === "about" ? selectedStyle : notSelectedStyle}
+        >
+          A propos
+        </NavLink>
+      </div>
     </div>
   );
 };
