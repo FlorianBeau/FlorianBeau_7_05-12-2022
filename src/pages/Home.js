@@ -13,6 +13,8 @@ const Home = () => {
         {Offers.map((offer) => (
           <div>
             <img src={offer.cover} />
+            <h3>{offer.title}</h3>
+            <p>{offer.location}</p>
           </div>
         ))}
       </div>

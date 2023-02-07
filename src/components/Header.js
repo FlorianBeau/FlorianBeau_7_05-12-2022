@@ -9,19 +9,23 @@ const Header = ({ underlined }) => {
   return (
     <div className="HeaderContainer">
       <Logo />
-      <div className="HeaderNavLink">
-        <NavLink
-          to="/"
-          style={underlined === "home" ? selectedStyle : notSelectedStyle}
-        >
-          Accueil
-        </NavLink>
-        <NavLink
-          to="/A_propos"
-          style={underlined === "about" ? selectedStyle : notSelectedStyle}
-        >
-          A propos
-        </NavLink>
+      <div className="HeaderNavLink NavLink">
+        <div>
+          <NavLink
+            to="/"
+            style={underlined === "home" ? selectedStyle : notSelectedStyle}
+          >
+            Accueil
+          </NavLink>
+        </div>
+        <div className="MarginAbout">
+          <NavLink
+            to="/A_propos"
+            style={underlined === "about" ? selectedStyle : notSelectedStyle}
+          >
+            A propos
+          </NavLink>
+        </div>
       </div>
     </div>
   );
