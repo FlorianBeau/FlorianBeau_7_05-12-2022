@@ -1,13 +1,16 @@
 import React from "react";
-import Logo from "../components/Logo";
+import Header from "../components/Header";
+
 const Error404 = () => {
   return (
     <div>
-      <Logo />
+      <Header underlined={"about"} />
 
-      <h1>404</h1>
-      <p>Oups! La page que vous demandez n'existe pas.</p>
+      <div>
+        <p className="title404">404</p>
 
+        <p>Oups! La page que vous demandez n'existe pas.</p>
+      </div>
       <br />
     </div>
   );
