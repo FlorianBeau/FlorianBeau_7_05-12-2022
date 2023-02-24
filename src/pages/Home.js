@@ -1,10 +1,10 @@
-import React from "react";
-import Header from "../components/Header";
-import Banner from "../components/Banner";
-import BannerImage from "../assets/IMG.png";
-import Offers from "../data/data.json";
-import "../styles/styleHome.sass";
-import { NavLink } from "react-router-dom";
+import React from "react"
+import Header from "../components/Header"
+import Banner from "../components/Banner"
+import BannerImage from "../assets/IMG.png"
+import Offers from "../data/data.json"
+import "../styles/styleHome.sass"
+import { NavLink } from "react-router-dom"
 
 const Home = () => {
   // console.log(Offers);
@@ -38,7 +38,7 @@ const Home = () => {
         ))}
       </div>{" "}
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
