@@ -3,9 +3,13 @@ import { NavLink } from "react-router-dom";
 import Logo from "./Logo.js";
 import "../styles/styleHeader.sass";
 
+// Fonction fléchée permettant l'affichage du Header
 const Header = ({ underlined }) => {
   const selectedStyle = { borderBottom: "2px red solid" };
   const notSelectedStyle = { borderBottom: "0" };
+  
+  // Affichage du visuel retourné par la fonction: des divs contenants les composants Logo
+  // et Navlink
   return (
     <div className="HeaderContainer">
       <Logo />

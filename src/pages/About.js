@@ -3,6 +3,8 @@ import Banner from "../components/Banner";
 import Header from "../components/Header";
 import BannerImage from "../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png";
 
+// Fonction fléchée permettant d'afficher le coposant Header et le composant Banner sur la page
+// "à propos".
 const About = () => {
   return (
     <div>

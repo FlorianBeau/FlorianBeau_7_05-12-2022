@@ -1,6 +1,9 @@
 import React from "react";
 import Header from "../components/Header";
 
+// Fonction fléchée permettant d'afficher le composant Header, ainsi que la phrase
+// indiquant l'erreur.
+
 const Error404 = () => {
   return (
     <div>

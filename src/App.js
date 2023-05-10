@@ -1,3 +1,5 @@
+// Fichier point d'entrée de l'application
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./pages/About";
@@ -5,6 +7,9 @@ import Home from "./pages/Home";
 import Error404 from "./pages/Error404";
 import FicheLogement from "./pages/FicheLogement";
 
+// Fonction fléchée permettant la création des routes. On encapsule le contenu avec
+// BrowserRouter, puis on crée chaque route en liant le nom du chemin (path) avec le
+// composant souhaité affin de pouvoir l'afficher.
 const App = () => {
   return (
     <BrowserRouter>

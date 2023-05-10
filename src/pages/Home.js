@@ -6,6 +6,9 @@ import Offers from "../data/data.json"
 import "../styles/styleHome.sass"
 import { NavLink } from "react-router-dom"
 
+
+// Fonction fléchée permettant l'affichage des composants Header, Banner ainsi que des
+// différents produits disponibles (fiches logement) sur la page d'accueil.
 const Home = () => {
   // console.log(Offers);
   return (
