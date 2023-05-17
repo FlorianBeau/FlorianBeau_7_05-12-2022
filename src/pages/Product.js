@@ -10,27 +10,29 @@ import redStar from "../assets/red_star.png"
 
 const Product = () => {
   const idOffer = useParams().id
-  const [offer, setOffer] = useState({ pictures: [] })
+  const offer = { pictures: [] }
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
   const [stars, setStars] = useState([])
+
+  // Recherche une offre dont l'id est égal à idOffer
+  const offer_ = Offers.find((item) => item.id === idOffer)
 
   // Affichage de la note du logement (nombres d'éoiles)
   const starMaker = (rating) => {
     let stars_ = []
     for (let i = 1; i <= 5; i++) {
-      stars_.push(i <= rating ? "redStar" : "whiteStar")
+      stars_.push(i <= rating ? "redStar" : "greyStar")
     }
     setStars(stars_)
   }
 
   useEffect(() => {
-    // Recherche une offre dont l'id est égal à idOffer
-    const offer_ = Offers.find((item) => item.id === idOffer)
     // Affectation de la note
     starMaker(offer_.rating)
-    setOffer(offer_)
+    // setOffer(offer_) <----------------------------------------- MIT EN COMMENTAIRE
+    console.log(offer);
   }, [])
-  console.log(offer)
+
 
   // Composant permettant de créer le slider (image précédente)
   const slidePrev = () => {
@@ -50,7 +52,9 @@ const Product = () => {
     }
   }
 
-  const rating = Offers[0].rating;
+  const rating = offer.rating;
+   { /* CODE PRECEDENT : const rating = Offers[0].rating; */ }
+
 
   // --------------------------------------------------------------------------------- //
 
@@ -61,22 +65,37 @@ const Product = () => {
       {/* Container contenant le slider*/}
       <div className="offerContainer">
           <div className="sliderContainer" style= {{backgroundImage: `url(${offer.pictures[currentImgIndex]})` }}>
-            <button className="sliderButton" onClick={slidePrev}><img src={ButtonLeft} /></button>
-            <button className="sliderButton" onClick={slideNext}><img src={ButtonRight} /></button>
+            <button className="sliderButton" onClick={slidePrev}><img src={ButtonLeft} alt="Left" /></button>
+            <button className="sliderButton" onClick={slideNext}><img src={ButtonRight} alt="Right" /></button>
           </div>
-
-        
         <div>
           <h1 className="h1">{offer.title}</h1>
           <h2 className="localisation">{offer.location}</h2>
+          
+
+        {/* CONTAINER TAGS A TERMINER ------------------------------------------------------- */} 
           <div className="tags">
-            <ul>{offer.tags}</ul>
-            <div className="starsContainer">
+
+							{offer.tags.map((tag, index) => {
+								return (
+									<button key={index}>{tag}</button>
+								)
+							})}
+						</div>
+
+						{/* {offer.tags.map((tags, index) => { return(<span key={index}>{tags}</span>)
+							)}} */}
+
+        {/* CONTAINER TAGS A TERMINER ------------------------------------------------------- */} 
+
+{/* CONTAINER STARS A TERMINER ------------------------------------------------------- */}
+            {/* <div className="starsContainer">
               {stars.map((star, index) => (
                 <div className={star} key={index}></div>
               ))}
-            </div>
-          </div>
+            </div> */}
+
+{/* CONTAINER STARS A TERMINER ------------------------------------------------------- */}
           {/* Container "Description" and "Equipements": */}
           <div className="containerFlexDiv">
             <div className="borderStyle">
@@ -98,7 +117,6 @@ const Product = () => {
           </div>
         </div>
       </div>
-
       <br />
     </div>
   )
