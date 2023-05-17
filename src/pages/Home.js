@@ -1,16 +1,14 @@
 import React from "react"
-import Header from "../components/Header"
 import Banner from "../components/Banner"
 import BannerImage from "../assets/IMG.png"
 import Offers from "../data/data.json"
-import "../styles/styleHome.sass"
+import "../styles/styleHome.scss"
 import { NavLink } from "react-router-dom"
+import Header from "../components/Header"
 
-
-// Fonction fléchée permettant l'affichage des composants Header, Banner ainsi que des
-// différents produits disponibles (fiches logement) sur la page d'accueil.
+/* Composant permettant l'affichage des composants ainsi que des différentes locations
+disponibles sur la page d'accueil */
 const Home = () => {
-  // console.log(Offers);
   return (
     <div>
       <Header underlined={"home"} />
@@ -24,12 +22,11 @@ const Home = () => {
                 <img
                   className="img"
                   src={offer.cover}
-                  alt="Aperçus de l'offre"
+                  alt="Aperçu de l'offre"
                 />
               </div>
               <div className="div_txt">
                 <div>
-                  {" "}
                   <h3>{offer.title}</h3>
                 </div>
                 <div>
@@ -39,7 +36,7 @@ const Home = () => {
             </div>
           </NavLink>
         ))}
-      </div>{" "}
+      </div>
     </div>
   )
 }

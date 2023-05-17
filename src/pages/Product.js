@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-//import ReactDOM from "react-dom/client"
-
 import Header from "../components/Header"
-import "../styles/styleFicheLogement.sass"
+import "../styles/styleProduct.scss"
 import Offers from "../data/data.json"
 import ButtonLeft from "../assets/arrow-left.png"
 import ButtonRight from "../assets/arrow-right.png"
+import greyStar from "../assets/grey_star.png"
+import redStar from "../assets/red_star.png"
 
-// Fonction fléchée permettant l'affichage du détail de la fiche logement
-const FicheLogement = () => {
+const Product = () => {
   const idOffer = useParams().id
   const [offer, setOffer] = useState({ pictures: [] })
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
   const [stars, setStars] = useState([])
 
-  // Fonction fléchée permettant l'affichage du nombre d'étoiles pour la note du logement
+  // Affichage de la note du logement (nombres d'éoiles)
   const starMaker = (rating) => {
     let stars_ = []
     for (let i = 1; i <= 5; i++) {
@@ -24,18 +23,16 @@ const FicheLogement = () => {
     setStars(stars_)
   }
 
-  // Utilisation du hook React "UseEffect" cumulé à "UseState" afin d'afficher chaque
-  // fiche produit suivant son id. On prends la liste des logements, on utilise la
-  // méthode find pour trouver chaque produit de offer que l'on nomme item. Puis on
-  // indique que chaque item est égal à chaque offer.
   useEffect(() => {
+    // Recherche une offre dont l'id est égal à idOffer
     const offer_ = Offers.find((item) => item.id === idOffer)
+    // Affectation de la note
     starMaker(offer_.rating)
     setOffer(offer_)
   }, [])
   console.log(offer)
 
-  // Fonction fléchée permettant de créer le slider (image précédente)
+  // Composant permettant de créer le slider (image précédente)
   const slidePrev = () => {
     if (currentImgIndex > 0) {
       setCurrentImgIndex(currentImgIndex - 1)
@@ -44,7 +41,7 @@ const FicheLogement = () => {
     }
   }
 
-    // Fonction fléchée permettant de créer le slider (image suivante)
+    // Composant permettant de créer le slider (image suivante)
   const slideNext = () => {
     if (currentImgIndex < offer.pictures.length - 1) {
       setCurrentImgIndex(currentImgIndex + 1)
@@ -53,20 +50,21 @@ const FicheLogement = () => {
     }
   }
 
+  const rating = Offers[0].rating;
+
+  // --------------------------------------------------------------------------------- //
+
   // Affichage du rendu visuel dans la fiche logement
   return (
     <div>
       <Header />
+      {/* Container contenant le slider*/}
       <div className="offerContainer">
-          <img src={offer.pictures[currentImgIndex]} alt={offer.title} className="img"/>
-        <div>
-          <div className="flex-start">
-          <button className="sliderButton" onClick={slideNext}><img src={ButtonLeft} /></button>
-        </div>
-        <div className="flex-end">
-          <button className="sliderButton" onClick={slideNext}><img src={ButtonRight} /></button>
-        </div>
-        </div>
+          <div className="sliderContainer" style= {{backgroundImage: `url(${offer.pictures[currentImgIndex]})` }}>
+            <button className="sliderButton" onClick={slidePrev}><img src={ButtonLeft} /></button>
+            <button className="sliderButton" onClick={slideNext}><img src={ButtonRight} /></button>
+          </div>
+
         
         <div>
           <h1 className="h1">{offer.title}</h1>
@@ -105,5 +103,5 @@ const FicheLogement = () => {
     </div>
   )
 }
-
-export default FicheLogement
+         
+export default Product;

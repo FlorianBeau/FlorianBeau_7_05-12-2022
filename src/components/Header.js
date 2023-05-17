@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo.js";
-import "../styles/styleHeader.sass";
+import "../styles/styleHeader.scss";
 
-// Fonction fléchée permettant l'affichage du Header
+// Composant permettant l'affichage du Header
 const Header = ({ underlined }) => {
   const selectedStyle = { borderBottom: "2px red solid" };
   const notSelectedStyle = { borderBottom: "0" };

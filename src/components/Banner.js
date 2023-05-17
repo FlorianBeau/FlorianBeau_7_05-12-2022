@@ -1,6 +1,6 @@
-import "../styles/styleBanner.sass";
+import "../styles/styleBanner.scss"
 
-  // Fonction fléchée permettant de créer la bannière dans une div avec son titre et son
+  // Composant permettant de créer la bannière dans une div avec son titre et son
   // image
 const Banner = ({ imageSrc, title }) => {
   return (

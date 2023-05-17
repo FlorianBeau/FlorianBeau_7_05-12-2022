@@ -1,6 +1,3 @@
-// Point d'entrée de la configuratioin Webpack importée avec "Create React App"
-//lors de l'installation.
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
