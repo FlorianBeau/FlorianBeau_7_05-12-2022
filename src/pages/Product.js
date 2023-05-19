@@ -10,14 +10,13 @@ import redStar from "../assets/red_star.png"
 
 const Product = () => {
   const idOffer = useParams().id
-  const offer = { pictures: [] }
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
   const [stars, setStars] = useState([])
 
   // Recherche une offre dont l'id est égal à idOffer
-  const offer_ = Offers.find((item) => item.id === idOffer)
+  const offer = Offers.find((item) => item.id === idOffer)
 
-  // Affichage de la note du logement (nombres d'éoiles)
+  // Affichage de la note du logement (nombres d'étoiles)
   const starMaker = (rating) => {
     let stars_ = []
     for (let i = 1; i <= 5; i++) {
@@ -28,9 +27,8 @@ const Product = () => {
 
   useEffect(() => {
     // Affectation de la note
-    starMaker(offer_.rating)
-    // setOffer(offer_) <----------------------------------------- MIT EN COMMENTAIRE
-    console.log(offer);
+    starMaker(offer.rating)
+    // console.log(offer);
   }, [])
 
 
@@ -52,7 +50,7 @@ const Product = () => {
     }
   }
 
-  const rating = offer.rating;
+  // const rating = offer.rating; // -------------------------------------- COMMENTE POUR TEST //
    { /* CODE PRECEDENT : const rating = Offers[0].rating; */ }
 
 
@@ -71,31 +69,30 @@ const Product = () => {
         <div>
           <h1 className="h1">{offer.title}</h1>
           <h2 className="localisation">{offer.location}</h2>
-          
 
-        {/* CONTAINER TAGS A TERMINER ------------------------------------------------------- */} 
-          <div className="tags">
+          <div className="containerFlexDiv">
 
+             {/* CONTAINER TAGS A TERMINER ------------------------------------------------------- */} 
+          <div className="containerFlexDiv">
 							{offer.tags.map((tag, index) => {
-								return (
-									<button key={index}>{tag}</button>
-								)
+								return (<div className="tags"><span key={index}>{tag}</span></div>)
 							})}
-						</div>
+					</div>
+              {/* CONTAINER STARS A TERMINER ------------------------------------------------------- */}
+            <div className="starsContainer">
+              {stars.map((star, index) => {
+                return (<div className="tags"><span key={index}></span></div>)
+              })}
+          </div>
+              {/* CONTAINER STARS A TERMINER ------------------------------------------------------- */}
+          </div>
+       
 
 						{/* {offer.tags.map((tags, index) => { return(<span key={index}>{tags}</span>)
 							)}} */}
 
         {/* CONTAINER TAGS A TERMINER ------------------------------------------------------- */} 
 
-{/* CONTAINER STARS A TERMINER ------------------------------------------------------- */}
-            {/* <div className="starsContainer">
-              {stars.map((star, index) => (
-                <div className={star} key={index}></div>
-              ))}
-            </div> */}
-
-{/* CONTAINER STARS A TERMINER ------------------------------------------------------- */}
           {/* Container "Description" and "Equipements": */}
           <div className="containerFlexDiv">
             <div className="borderStyle">
