@@ -4,7 +4,10 @@
   margin-left: 5%;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center; 
+  flex-wrap: wrap;
+
+}
 
 .HeaderNavLink a {
   color: #FF6060;

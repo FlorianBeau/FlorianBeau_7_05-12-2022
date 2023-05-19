@@ -28,7 +28,7 @@ const Product = () => {
   useEffect(() => {
     // Affectation de la note
     starMaker(offer.rating)
-    // console.log(offer);
+    console.log(offer); //
   }, [])
 
 
@@ -50,9 +50,7 @@ const Product = () => {
     }
   }
 
-  // const rating = offer.rating; // -------------------------------------- COMMENTE POUR TEST //
-   { /* CODE PRECEDENT : const rating = Offers[0].rating; */ }
-
+  const rating = offer.rating; // -------------------------------------- COMMENTE POUR TEST //
 
   // --------------------------------------------------------------------------------- //
 
@@ -72,18 +70,23 @@ const Product = () => {
 
           <div className="containerFlexDiv">
 
-             {/* CONTAINER TAGS A TERMINER ------------------------------------------------------- */} 
-          <div className="containerFlexDiv">
-							{offer.tags.map((tag, index) => {
-								return (<div className="tags"><span key={index}>{tag}</span></div>)
-							})}
-					</div>
-              {/* CONTAINER STARS A TERMINER ------------------------------------------------------- */}
-            <div className="starsContainer">
-              {stars.map((star, index) => {
-                return (<div className="tags"><span key={index}></span></div>)
-              })}
-          </div>
+              {/* CONTAINER TAGS A TERMINER ------------------------------------------------------- */} 
+            <div className="containerFlexDiv">
+                {offer.tags.map((tag, index) => {
+                  return (<div className="tags"><span key={index}>{tag}</span></div>)
+                })}
+            </div>
+                {/* CONTAINER STARS A TERMINER ------------------------------------------------------- */}
+              <div className="starsContainer">
+                <div className="accomodation_content_host_stars">
+                  {[...Array(5)].map((star, index) => {
+                    const ratingValue = index + 1;
+                    return (
+                      <img key={index} src={ratingValue <= rating ? redStar : greyStar} alt="star" />
+                    )
+                  })}
+                </div>
+            </div>
               {/* CONTAINER STARS A TERMINER ------------------------------------------------------- */}
           </div>
        
