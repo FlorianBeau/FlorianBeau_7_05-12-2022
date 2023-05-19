@@ -28,7 +28,7 @@ const Product = () => {
   useEffect(() => {
     // Affectation de la note
     starMaker(offer.rating)
-    console.log(offer); //
+    console.log(offer.host.picture); // <---------------------------------- TEST
   }, [])
 
 
@@ -50,9 +50,7 @@ const Product = () => {
     }
   }
 
-  const rating = offer.rating; // -------------------------------------- COMMENTE POUR TEST //
-
-  // --------------------------------------------------------------------------------- //
+  const rating = offer.rating;
 
   // Affichage du rendu visuel dans la fiche logement
   return (
@@ -66,56 +64,56 @@ const Product = () => {
           </div>
         <div>
           <h1 className="h1">{offer.title}</h1>
-          <h2 className="localisation">{offer.location}</h2>
-
           <div className="containerFlexDiv">
-
-              {/* CONTAINER TAGS A TERMINER ------------------------------------------------------- */} 
+            <h2 className="localisation">{offer.location}</h2>
             <div className="containerFlexDiv">
-                {offer.tags.map((tag, index) => {
-                  return (<div className="tags"><span key={index}>{tag}</span></div>)
-                })}
-            </div>
-                {/* CONTAINER STARS A TERMINER ------------------------------------------------------- */}
-              <div className="starsContainer">
-                <div className="accomodation_content_host_stars">
-                  {[...Array(5)].map((star, index) => {
-                    const ratingValue = index + 1;
-                    return (
-                      <img key={index} src={ratingValue <= rating ? redStar : greyStar} alt="star" />
-                    )
-                  })}
+              <div className="hostFlex"><p>{offer.host.name}</p></div>
+              <div>
+                <img src={offer.host.picture} className="hostImg" alt="host of this accomodation" />
                 </div>
             </div>
-              {/* CONTAINER STARS A TERMINER ------------------------------------------------------- */}
+            
           </div>
-       
+                <br/>
 
-						{/* {offer.tags.map((tags, index) => { return(<span key={index}>{tags}</span>)
-							)}} */}
-
-        {/* CONTAINER TAGS A TERMINER ------------------------------------------------------- */} 
-
-          {/* Container "Description" and "Equipements": */}
-          <div className="containerFlexDiv">
-            <div className="borderStyle">
-              <div>
-                <h3 className="titleFlexDiv">Description</h3>
+            <div className="containerFlexDiv">
+              <div className="containerFlexDiv">
+                  {offer.tags.map((tag, index) => {
+                    return (<div className="tags"><span key={index}>{tag}</span></div>)
+                  })}
               </div>
-              <div>
+                <div className="starsContainer">
+                  <div className="accomodation_content_host_stars">
+                    {[...Array(5)].map((star, index) => {
+                      const ratingValue = index + 1;
+                      return (
+                        <img key={index} src={ratingValue <= rating ? redStar : greyStar} alt="star" />
+                      )
+                    })}
+                  </div>
+              </div>
+            </div>
+
+            {/* Container "Description" and "Equipements": */}
+            <div className="containerFlexDiv">
+              <div className="borderStyle">
+                <div>
+                  <h3 className="titleFlexDiv">Description</h3>
+                </div>
+                <div>
+                  <ul>
+                    <p className="redText">{offer.description}</p>
+                  </ul>
+                </div>
+              </div>
+              <div className="borderStyle">
+                <h3 className="titleFlexDiv">Equipements</h3>
                 <ul>
-                  <p className="redText">{offer.description}</p>
+                  <p className="redText">{offer.equipments}</p>
                 </ul>
               </div>
             </div>
-            <div className="borderStyle">
-              <h3 className="titleFlexDiv">Equipements</h3>
-              <ul>
-                <p className="redText">{offer.equipments}</p>
-              </ul>
-            </div>
           </div>
-        </div>
       </div>
       <br />
     </div>
