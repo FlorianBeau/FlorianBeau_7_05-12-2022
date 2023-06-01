@@ -7,6 +7,10 @@ import ButtonLeft from "../assets/arrow-left.png"
 import ButtonRight from "../assets/arrow-right.png"
 import greyStar from "../assets/grey_star.png"
 import redStar from "../assets/red_star.png"
+import arrow from "../assets/arrow.png"
+
+import DropdownLeft from "../components/DropdownLeft"
+import DropdownRight from "../components/DropdownRight"
 
 const Product = () => {
   const idOffer = useParams().id
@@ -28,7 +32,7 @@ const Product = () => {
   useEffect(() => {
     // Affectation de la note
     starMaker(offer.rating)
-    console.log(offer.host.picture); // <---------------------------------- TEST
+    // console.log(offer.host.picture); // <---------------------------------- TEST
   }, [])
 
 
@@ -53,71 +57,72 @@ const Product = () => {
   const rating = offer.rating;
 
   // Affichage du rendu visuel dans la fiche logement
-  return (
-    <div>
-      <Header />
-      {/* Container contenant le slider*/}
-      <div className="offerContainer">
-          <div className="sliderContainer" style= {{backgroundImage: `url(${offer.pictures[currentImgIndex]})` }}>
-            <button className="sliderButton" onClick={slidePrev}><img src={ButtonLeft} alt="Left" /></button>
-            <button className="sliderButton" onClick={slideNext}><img src={ButtonRight} alt="Right" /></button>
-          </div>
-        <div>
-          <h1 className="h1">{offer.title}</h1>
+ return (
+  <div>
+    <Header />
+    {/* Container contenant le slider */}
+    <main className="main">
+      <div className="sliderContainer">
+          {/* <button  className="sliderButton" onClick={slidePrev}><img src={ButtonLeft} alt="Left" /></button> */}
+  <img src={`${offer.pictures[currentImgIndex]}`} className="imgSlider" alt="picturesSlider" />
+          {/* <button  className="sliderButton" onClick={slideNext}><img src={ButtonRight} alt="Right" /></button> */}
+      </div>
+
+      <div>
+        <h1 className="h1">{offer.title}</h1>
+        <div className="containerFlexDiv">
+          <h2 className="localisation">{offer.location}</h2>
           <div className="containerFlexDiv">
-            <h2 className="localisation">{offer.location}</h2>
-            <div className="containerFlexDiv">
-              <div className="hostFlex"><p>{offer.host.name}</p></div>
-              <div>
-                <img src={offer.host.picture} className="hostImg" alt="host of this accomodation" />
-                </div>
-            </div>
-            
-          </div>
-                <br/>
-
-            <div className="containerFlexDiv">
-              <div className="containerFlexDiv">
-                  {offer.tags.map((tag, index) => {
-                    return (<div className="tags"><span key={index}>{tag}</span></div>)
-                  })}
-              </div>
-                <div className="starsContainer">
-                  <div className="accomodation_content_host_stars">
-                    {[...Array(5)].map((star, index) => {
-                      const ratingValue = index + 1;
-                      return (
-                        <img key={index} src={ratingValue <= rating ? redStar : greyStar} alt="star" />
-                      )
-                    })}
-                  </div>
-              </div>
-            </div>
-
-            {/* Container "Description" and "Equipements": */}
-            <div className="containerFlexDiv">
-              <div className="borderStyle">
-                <div>
-                  <h3 className="titleFlexDiv">Description</h3>
-                </div>
-                <div>
-                  <ul>
-                    <p className="redText">{offer.description}</p>
-                  </ul>
-                </div>
-              </div>
-              <div className="borderStyle">
-                <h3 className="titleFlexDiv">Equipements</h3>
-                <ul>
-                  <p className="redText">{offer.equipments}</p>
-                </ul>
-              </div>
+            <div className="hostFlex"><p>{offer.host.name}</p></div>
+            <div>
+              <img src={offer.host.picture} className="hostImg" alt="host of this accommodation" />
             </div>
           </div>
+        </div>
+        <br />
+        <div className="containerFlexDiv">
+          <div className="containerFlexDiv">
+            {offer.tags.map((tag, index) => {
+              return (<div className="tags"><span key={index}>{tag}</span></div>)
+            })}
+          </div>
+          <div className="starsContainer">
+            <div className="accommodation_content_host_stars">
+              {[...Array(5)].map((star, index) => {
+                const ratingValue = index + 1;
+                return (
+                  <img key={index} src={ratingValue <= rating ? redStar : greyStar} alt="star" />
+                )
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* Container "Description" and "Equipements" */}
+        <div className="containerDescriptionEquipement">
+
+          {/* Div description */}
+          <div className="divContent">
+            <div>
+              <h3>Description</h3>
+            </div>
+              <div className="divArrow"><img src={arrow} alt="arrow"></img></div>
+          </div>
+
+          {/* Div équipement */}
+          <div className="divContent">
+            <div>
+              <h3>Equipement</h3>
+            </div>
+            <div className="divArrow"><img src={arrow} alt="arrowDropdown"></img></div>
+          </div>
+
+        </div>
       </div>
       <br />
-    </div>
-  )
+    </main>
+  </div>
+);
 }
          
 export default Product;

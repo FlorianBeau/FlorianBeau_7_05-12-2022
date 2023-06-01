@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import Error404 from "./pages/Error404";
 import FicheLogement from "./pages/Product";
 import Footer from "./components/Footer";
-import Banner from "./components/Banner";
 
 // Composant sous forme de fonction permettant la création des routes.
 

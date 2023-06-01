@@ -1,3 +1,7 @@
+.main {
+  width: 90%;
+  margin-left: 5%; }
+
 .h1 {
   color: #FF6060;
   font-size: 40px; }
@@ -8,56 +12,59 @@
   line-height: 25.67px;
   font-weight: 400; }
 
-// Container tags
+// Container tags ---------------------------------------------------------------------
 .tags {
   color: white;
   background-color: #FF6060;
   width: auto;
   height: 40px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   border:none;
   margin: 0px 14px 0px 0px;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 30px 0px 30px;
 }
 
 .borderStyle {
-  width: 47%; }
+  width: 820px; }
 
 .containerFlexDiv {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
 }
 
 .titleFlexDiv {
   background-color: #FF6060;
   color: white;
   font-size: 25px;
-  font-weight: 400; }
+  font-weight: 400;
+
+  width: auto;
+  height: 40px;
+  text-align: center;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  margin: 20px 0px 0px 0px;
+  padding: 7px 0px 7px 20px;
+}
 
 .redText {
   color: #FF6060; }
 
-// Slider
-.offerContainer {
-  width: 90%;
-  margin-left: 5%; }
+// Container slider -------------------------------------------------------------------
 
 .sliderContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 15px;
+  // flex-direction: row;
+  // flex-wrap: nowrap;
+  // justify-content: space-between;
+  // align-items: center;
+  border-radius: 25px;
   box-shadow: 1px 1px 4px silver;
+  height: 415px;
 }
 
 .sliderButton {
@@ -65,18 +72,29 @@
   width: 100px;
   background-color: transparent;
   border: none;
+  position: relative;
   }
+
+.imgSlider {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
 
 // Container host
 .hostFlex {
   display: flex;
   flex-wrap: wrap;
-  width: 100px;
+  width: 50%;
   align-items: center;
+  text-align: right;
 }
 
 .hostImg {
   border-radius: 50%;
+  height: 70px;
+  width: 70px;
 }
 
 // Container stars (avis clients)
@@ -98,3 +116,43 @@
   border: #FF6060 2px solid;
   display: flex;
 }
+
+// Container description ----------------------------------------------------------- //
+// <--------------------------------------------------------------- TEST
+.containerDescriptionEquipement {
+    text-align: left;
+    border: solid 2px black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.divContent {
+    border: solid 2px blue;
+    width: 777px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color:#FF6060;
+    color: white;
+    border-radius: 14px;
+    padding-left: 22px;
+}
+
+.divArrow {
+    border: solid 2px green;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 70px;
+    width: 70px;
+    // .img {
+    //   height: 100%;
+    //   width: 100%;
+    // }
+  }
+
+// <--------------------------------------------------------------- TEST
