@@ -63,9 +63,9 @@ const Product = () => {
     {/* Container contenant le slider */}
     <main className="main">
       <div className="sliderContainer">
-          {/* <button  className="sliderButton" onClick={slidePrev}><img src={ButtonLeft} alt="Left" /></button> */}
-  <img src={`${offer.pictures[currentImgIndex]}`} className="imgSlider" alt="picturesSlider" />
-          {/* <button  className="sliderButton" onClick={slideNext}><img src={ButtonRight} alt="Right" /></button> */}
+          <button className="sliderButtonLeft" onClick={slidePrev}><img src={ButtonLeft} alt="Left" className="arrowSlider" /></button>
+        <img src={`${offer.pictures[currentImgIndex]}`} className="imgSlider" alt="picturesSlider" />
+          <button className="sliderButtonRight" onClick={slideNext}><img src={ButtonRight} alt="Right" className="arrowSlider" /></button>
       </div>
 
       <div>

@@ -58,21 +58,33 @@
 // Container slider -------------------------------------------------------------------
 
 .sliderContainer {
-  // flex-direction: row;
-  // flex-wrap: nowrap;
-  // justify-content: space-between;
-  // align-items: center;
   border-radius: 25px;
   box-shadow: 1px 1px 4px silver;
   height: 415px;
+  position: relative;
 }
 
-.sliderButton {
+.sliderButtonRight {
   height: 100px;
   width: 100px;
   background-color: transparent;
   border: none;
-  position: relative;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  padding: 170px 0px;
+  }
+
+  .sliderButtonLeft {
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  padding: 170px 0px;
+
   }
 
 .imgSlider {
@@ -80,9 +92,10 @@
   width: 100%;
   object-fit: cover;
   border-radius: 25px;
+  position: absolute;
 }
 
-// Container host
+// Container host -------------------------------------------------------------------
 .hostFlex {
   display: flex;
   flex-wrap: wrap;
