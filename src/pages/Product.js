@@ -7,10 +7,8 @@ import ButtonLeft from "../assets/arrow-left.png"
 import ButtonRight from "../assets/arrow-right.png"
 import greyStar from "../assets/grey_star.png"
 import redStar from "../assets/red_star.png"
-import arrow from "../assets/arrow.png"
-
-import DropdownLeft from "../components/DropdownLeft"
-import DropdownRight from "../components/DropdownRight"
+import arrowDown from "../assets/arrow_down.png"
+import arrowUp from "../assets/arrow_up.png"
 
 const Product = () => {
   const idOffer = useParams().id
@@ -33,7 +31,7 @@ const Product = () => {
     // Affectation de la note
     starMaker(offer.rating)
     // console.log(offer.host.picture); // <---------------------------------- TEST
-  }, [])
+  }, [offer.rating])
 
 
   // Composant permettant de créer le slider (image précédente)
@@ -67,7 +65,6 @@ const Product = () => {
         <img src={`${offer.pictures[currentImgIndex]}`} className="imgSlider" alt="picturesSlider" />
           <button className="sliderButtonRight" onClick={slideNext}><img src={ButtonRight} alt="Right" className="arrowSlider" /></button>
       </div>
-
       <div>
         <h1 className="h1">{offer.title}</h1>
         <div className="containerFlexDiv">
@@ -83,7 +80,7 @@ const Product = () => {
         <div className="containerFlexDiv">
           <div className="containerFlexDiv">
             {offer.tags.map((tag, index) => {
-              return (<div className="tags"><span key={index}>{tag}</span></div>)
+              return (<div className="tags" key={index}><span>{tag}</span></div>)
             })}
           </div>
           <div className="starsContainer">
@@ -98,24 +95,69 @@ const Product = () => {
           </div>
         </div>
 
-        {/* Container "Description" and "Equipements" */}
+        {/* Container "Description" and "Equipements" -------------------------------- */}
         <div className="containerDescriptionEquipement">
 
           {/* Div description */}
           <div className="divContent">
-            <div>
-              <h3>Description</h3>
+            <div className="divUp">
+              <div>
+                <h3>Description</h3>
+              </div>
+              <div>
+                <button className="divButton">
+                  <img src={arrowDown} alt="arrow_Down" />
+                </button>
+              </div>
             </div>
-              <div className="divArrow"><img src={arrow} alt="arrow"></img></div>
+            <div className="divText">
+              <p className="redText">{offer.description}</p>
+            </div>
           </div>
+          
+                  {/* Début d'une fonction ---------------------------------------- */}
+            {/* <div className="divArrow">
+                {(() => {
+                  const hello = () => {
+                    console.log("HELLO");
+                  };
+                  return (
+                      <div>
+                      <button onClick={hello} className="divButton">
+                        <img src={arrowDown} alt="arrow_Down" />
+                      </button>
+                      </div>
+                  );
+                })()}
+              </div> */}
+
+                  {/* Début d'une fonction ----------------------------------------- */}
+         
+
+           
 
           {/* Div équipement */}
-          <div className="divContent">
-            <div>
-              <h3>Equipement</h3>
+         <div className="divContent">
+            <div className="divUp">
+              <div>
+                <h3>Equipement</h3>
+              </div>
+              <div>
+                <button className="divButton">
+                  <img src={arrowDown} alt="arrow_Down" />
+                </button>
+              </div>
             </div>
-            <div className="divArrow"><img src={arrow} alt="arrowDropdown"></img></div>
+            <div className="divText">
+              
+              {offer.equipments.map((equipment, index) => {
+              return (<ul className="redText" key={index}>{equipment}</ul>)
+            })}
+              
+            </div>
           </div>
+
+{/* ---------------------------------------------------------------------------------- */}
 
         </div>
       </div>
