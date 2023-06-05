@@ -53,7 +53,9 @@
 }
 
 .redText {
-  color: #FF6060; }
+  color: #FF6060;
+  padding: 0;
+}
 
 // Container slider -------------------------------------------------------------------
 
@@ -132,7 +134,7 @@
 // <--------------------------------------------------------------- TEST
 .containerDescriptionEquipement {
     text-align: left;
-    border: solid 2px black;
+    // border: solid 2px black;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -141,13 +143,17 @@
 
 .divContent {
     // border: solid 2px blue;
-    width: 777px;
+    width: 773px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: white;
     border-radius: 14px;
-    margin: 0px 0px 30px 0px;
+    // border: solid 2px red;
+    background-color: #F0F0F0F0;
+    min-height: 230px;
+    height: auto;
+    position: relative;
 }
 
 .divUp {
@@ -158,6 +164,10 @@
     justify-content: space-between;
     flex-direction: row;
     border-radius: 14px;
+    // border: solid 2px green;
+    position: absolute;
+    width: 730px;
+    z-index: 1;
 }
 
 .divArrow {
@@ -177,11 +187,24 @@
 
   .divText {
     color: #000;
-    background-color: #F0F0F0F0;
+    // background-color: #F0F0F0F0;
     font-weight: 100;
-    padding: 0 22px;
-    box-shadow: 0px 0px 4px 0px silver;
+    padding: 20px 22px;
     border-radius: 0px 0px 14px 14px;
+    min-height: 230px;
+    height: auto;
+    // border: solid 2px orange;
+    position: relative;
+    margin-top: 53px;
   }
 
+  .p_Description {
+    color:#FF6060;
+    line-height: 1.5;
+  }
+  
+  .ul_Equipement {
+    color:#FF6060;
+    padding:0;
+  }
 // <--------------------------------------------------------------- TEST

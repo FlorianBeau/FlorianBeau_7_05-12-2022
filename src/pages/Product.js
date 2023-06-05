@@ -111,10 +111,9 @@ const Product = () => {
               </div>
             </div>
             <div className="divText">
-              <p className="redText">{offer.description}</p>
+              <p className="p_Description">{offer.description}</p>
             </div>
           </div>
-          
                   {/* Début d'une fonction ---------------------------------------- */}
             {/* <div className="divArrow">
                 {(() => {
@@ -130,12 +129,8 @@ const Product = () => {
                   );
                 })()}
               </div> */}
-
                   {/* Début d'une fonction ----------------------------------------- */}
          
-
-           
-
           {/* Div équipement */}
          <div className="divContent">
             <div className="divUp">
@@ -149,11 +144,9 @@ const Product = () => {
               </div>
             </div>
             <div className="divText">
-              
               {offer.equipments.map((equipment, index) => {
-              return (<ul className="redText" key={index}>{equipment}</ul>)
+              return (<ul className="ul_Equipement" key={index}>{equipment}</ul>)
             })}
-              
             </div>
           </div>
 
