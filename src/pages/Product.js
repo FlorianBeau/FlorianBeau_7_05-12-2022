@@ -9,6 +9,8 @@ import greyStar from "../assets/grey_star.png"
 import redStar from "../assets/red_star.png"
 import arrowDown from "../assets/arrow_down.png"
 import arrowUp from "../assets/arrow_up.png"
+import { text } from "@fortawesome/fontawesome-svg-core"
+import Collapse from "../components/Collapse"
 
 const Product = () => {
   const idOffer = useParams().id
@@ -33,7 +35,6 @@ const Product = () => {
     // console.log(offer.host.picture); // <---------------------------------- TEST
   }, [offer.rating])
 
-
   // Composant permettant de créer le slider (image précédente)
   const slidePrev = () => {
     if (currentImgIndex > 0) {
@@ -53,6 +54,12 @@ const Product = () => {
   }
 
   const rating = offer.rating;
+
+  // const displayDiv = () => {
+  //   if(isShow !== false ) {
+  //     console.log("OK");
+  //   }
+  // }
 
   // Affichage du rendu visuel dans la fiche logement
  return (
@@ -94,70 +101,16 @@ const Product = () => {
             </div>
           </div>
         </div>
-
-        {/* Container "Description" and "Equipements" -------------------------------- */}
-        <div className="containerDescriptionEquipement">
-
-          {/* Div description */}
-          <div className="divContent">
-            <div className="divUp">
-              <div>
-                <h3>Description</h3>
-              </div>
-              <div>
-                <button className="divButton">
-                  <img src={arrowDown} alt="arrow_Down" />
-                </button>
-              </div>
-            </div>
-            <div className="divText">
-              <p className="p_Description">{offer.description}</p>
-            </div>
-          </div>
-                  {/* Début d'une fonction ---------------------------------------- */}
-            {/* <div className="divArrow">
-                {(() => {
-                  const hello = () => {
-                    console.log("HELLO");
-                  };
-                  return (
-                      <div>
-                      <button onClick={hello} className="divButton">
-                        <img src={arrowDown} alt="arrow_Down" />
-                      </button>
-                      </div>
-                  );
-                })()}
-              </div> */}
-                  {/* Début d'une fonction ----------------------------------------- */}
-         
-          {/* Div équipement */}
-         <div className="divContent">
-            <div className="divUp">
-              <div>
-                <h3>Equipement</h3>
-              </div>
-              <div>
-                <button className="divButton">
-                  <img src={arrowDown} alt="arrow_Down" />
-                </button>
-              </div>
-            </div>
-            <div className="divText">
-              {offer.equipments.map((equipment, index) => {
-              return (<ul className="ul_Equipement" key={index}>{equipment}</ul>)
-            })}
-            </div>
-          </div>
-
-{/* ---------------------------------------------------------------------------------- */}
-
-        </div>
-      </div>
+</div>
       <br />
+         <Collapse />
+
     </main>
   </div>
-);
+   );
+
 }
-         
+
+
+
 export default Product;
