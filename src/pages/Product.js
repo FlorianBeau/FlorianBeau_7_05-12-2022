@@ -7,10 +7,8 @@ import ButtonLeft from "../assets/arrow-left.png"
 import ButtonRight from "../assets/arrow-right.png"
 import greyStar from "../assets/grey_star.png"
 import redStar from "../assets/red_star.png"
-import arrowDown from "../assets/arrow_down.png"
-import arrowUp from "../assets/arrow_up.png"
-import { text } from "@fortawesome/fontawesome-svg-core"
-import Collapse from "../components/Collapse"
+import CollapseDescription from "../components/CollapseDescription"
+import CollapseEquipment from "../components/CollapseEquipment"
 
 const Product = () => {
   const idOffer = useParams().id
@@ -55,12 +53,6 @@ const Product = () => {
 
   const rating = offer.rating;
 
-  // const displayDiv = () => {
-  //   if(isShow !== false ) {
-  //     console.log("OK");
-  //   }
-  // }
-
   // Affichage du rendu visuel dans la fiche logement
  return (
   <div>
@@ -101,16 +93,19 @@ const Product = () => {
             </div>
           </div>
         </div>
-</div>
+      </div>
       <br />
-         <Collapse />
-
+      <div className="containerDescriptionEquipement">
+      <CollapseDescription />
+      <CollapseEquipment />
+      </div>
     </main>
+               <br />
+           <br />
+
   </div>
    );
-
 }
-
 
 
 export default Product;

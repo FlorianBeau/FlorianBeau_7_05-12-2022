@@ -36,27 +36,6 @@
   flex-wrap: wrap;
 }
 
-.titleFlexDiv {
-  background-color: #FF6060;
-  color: white;
-  font-size: 25px;
-  font-weight: 400;
-
-  width: auto;
-  height: 40px;
-  text-align: center;
-  border-radius: 11px;
-  display: flex;
-  align-items: center;
-  margin: 20px 0px 0px 0px;
-  padding: 7px 0px 7px 20px;
-}
-
-.redText {
-  color: #FF6060;
-  padding: 0;
-}
-
 // Container slider -------------------------------------------------------------------
 
 .sliderContainer {
@@ -131,7 +110,6 @@
 }
 
 // Container description ----------------------------------------------------------- //
-// <--------------------------------------------------------------- TEST
 .containerDescriptionEquipement {
     text-align: left;
     // border: solid 2px black;
@@ -146,13 +124,12 @@
     width: 773px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     color: white;
     border-radius: 14px;
     // border: solid 2px red;
     background-color: #F0F0F0F0;
     height: auto;
-    position: relative;
 }
 
 .divUp {
@@ -164,7 +141,6 @@
     flex-direction: row;
     border-radius: 14px;
     // border: solid 2px green;
-    position: absolute;
     width: 730px;
     z-index: 1;
 }
@@ -184,29 +160,44 @@
     cursor: pointer;
   }
 
-  .divText1 {
-    color: #000;
-    // background-color: #F0F0F0F0;
+  .divText {
     font-weight: 100;
-    padding: 20px 22px;
-    border-radius: 0px 0px 14px 14px;
-    // border: solid 2px orange;
-    position: relative;
-    margin-top: 53px;
     display: block;
+    color:#FF6060;
+    margin: 7px -15px;
+    height: auto;
+    font-weight: 100;
   }
 
   .p_Description {
     color:#FF6060;
-    line-height: 1.5;
+    line-height: 1.7;
+    padding: 22px 22px;
+    margin: 0;
+    height: auto;
+    font-weight: 100;
+  }
+
+  .textWhite {
+    color: #FFFFFF;
   }
   
-  .ul_Equipement {
-    color:#FF6060;
-    padding:0;
-  }
-// <--------------------------------------------------------------- TEST
+// --------------------------------------------------------------- Footer
 
-.borderGreen {
-  border: solid 2px green
+.footer {
+  height: 200px;
+  width: 100%;
+  background-color:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logoFooter {
+ color: #FFFFFF;
+}
+
+.paragraphFooter {
+  color: #FFFFFF;
 }

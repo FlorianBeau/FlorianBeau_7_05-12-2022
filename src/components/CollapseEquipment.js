@@ -5,23 +5,19 @@ import arrowDown from "../assets/arrow_down.png"
 import arrowUp from "../assets/arrow_up.png"
 import { useParams } from "react-router-dom"
 
-const Collapse = () => {
+const CollapseEquipment = () => {
   const [isShow, setIsShow] = useState(false);
-    const idOffer = useParams().id
+    const idOffer = useParams().id;
 
     // Recherche une offre dont l'id est égal à idOffer
     const offer = Offers.find((item) => item.id === idOffer)
 
-// //    const toogle = () => {
-// //     }
-
   return isShow ? (
-    <div className="containerDescriptionEquipement">
-        {/* Div description */}
+        // First div (Description)
         <div className="divContent">
             <div className="divUp">
                 <div>
-                    <h3>Description</h3>
+                    <h3>Equipements</h3>
                 </div>
                 <div>
                     <button className="divButton" onClick={() => setIsShow(false)}>
@@ -29,23 +25,18 @@ const Collapse = () => {
                     </button>
                 </div>
             </div>
-
+            <div className="divText">
+                    {offer.equipments.map((equipment, index) => {
+                        return (<ul className="ul_Equipement" key={index}>{equipment}
+                   </ul>)
+                    })}
+            </div>
         </div>
-    
-    <div className="divContent">
-        <p className="p_Description">{offer.description}</p>
-    </div>
-
-    </div>
-    
-    
-    
-    ) : (
-
-<div className="divContent">
+                ) : (
+        <div>
             <div className="divUp">
                 <div>
-                    <h3>Description</h3>
+                    <h3 className="textWhite">Equipements</h3>
                 </div>
                 <div>
                     <button className="divButton" onClick={() => setIsShow(true)}>
@@ -53,12 +44,7 @@ const Collapse = () => {
                     </button>
                 </div>
             </div>
-
         </div>
-
-
-
         )
 };
-
-export default Collapse;
+    export default CollapseEquipment;
