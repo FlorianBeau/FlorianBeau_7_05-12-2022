@@ -57,6 +57,7 @@ const Product = () => {
  return (
   <div>
     <Header />
+    <br/>
     {/* Container contenant le slider */}
     <main className="main">
       <div className="sliderContainer">

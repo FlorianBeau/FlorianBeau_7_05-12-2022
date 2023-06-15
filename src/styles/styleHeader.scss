@@ -6,14 +6,13 @@
   justify-content: space-between;
   align-items: center; 
   flex-wrap: wrap;
-
 }
 
 .HeaderNavLink a {
   color: #FF6060;
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 100;
   font-size: 24px;
   line-height: 142.6%;
   text-decoration: none; }
@@ -22,4 +21,28 @@
   display: flex; }
 
 .MarginAbout {
-  margin-left: 60px; }
+  margin-left: 42px; }
+
+.logo {
+  padding-right: 30px;
+}
+
+@media (min-width: 0px) and (max-width: 281px) {
+  .logo img {
+    height: 30px;
+  }
+
+  .HeaderNavLink a {
+    font-size: 8px;
+  }
+}
+
+@media (min-width:282px) and (max-width: 426px) {
+  .logo img {
+    height: 30px;
+  }
+
+  .HeaderNavLink a {
+    font-size: 13px;
+  }
+}

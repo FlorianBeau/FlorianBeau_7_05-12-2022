@@ -17,9 +17,9 @@ const About = () => {
   return (
     <div>
       <Header underlined={"about"} />
+      <br/>
       <Banner imageSrc={BannerImage} title="" />
       <br />
-
       {/* Collapse "Fiabilité" */}
       {isShow1 ? (
         <div className="container">

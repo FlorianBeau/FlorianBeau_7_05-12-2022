@@ -2,7 +2,7 @@
   position: relative;
   width: 90%;
   height: 200px;
-  margin-left: 5%;
+  margin:0 5%;
 }
   .BannerContainer img, .BannerContainer h1, .BannerContainer .dark-filter {
     position: absolute;
@@ -15,6 +15,7 @@
     z-index: 0;
     border-radius: 15px;
     box-shadow: 1px 1px 4px silver;
+    object-fit: cover;
 }
 
   .BannerContainer .dark-filter {
@@ -29,4 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white; }
+    color: white; 
+    text-align: center;
+    margin: 0;
+  }

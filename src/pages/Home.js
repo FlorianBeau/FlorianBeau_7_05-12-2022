@@ -12,7 +12,8 @@ const Home = () => {
   return (
     <div>
       <Header underlined={"home"} />
-      <Banner imageSrc={BannerImage} title="Chez vous, partout et ailleurs" />
+      <br/>
+      <Banner imageSrc={BannerImage} title="Chez vous, partout et ailleurs"/>
       <div className="containerOffer">
         {Offers.map((offer) => (
           <NavLink key={offer.id} to={"/Fiche_logement/" + offer.id}>

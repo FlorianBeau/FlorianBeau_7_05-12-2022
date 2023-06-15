@@ -1,4 +1,5 @@
 import LogoFooter from "../assets/logo_footer.png"
+import "../styles/styleProduct.scss"
 
 // Composant permettant de créer le footer
 const Footer = () => {

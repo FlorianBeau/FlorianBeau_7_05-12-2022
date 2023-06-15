@@ -7,13 +7,14 @@ h1 {
 .containerOffer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 50px 5%;
-  padding: 31px 20px;
+  // padding: 31px 20px;
+  margin: 0 5%;
   border-radius: 15px;
   background-color: #F7F7F7; }
 
 .containerOffer a {
-  margin: 25px 30px; }
+  padding: 30px 0px 4px 0px;
+}
 
 .containerDiv {
   display: grid;
@@ -45,3 +46,96 @@ h1 {
   height: 100%;
   border-radius: 15px;
   object-fit: cover; }
+
+// Responsive with medias queries -------------------------------------------------------
+@media (max-width: 321px) {
+  .containerOffer {
+    // display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    }
+
+  .containerOffer a {
+    // margin-bottom: 30px;
+     min-height: 200px;
+     min-width: 200px;
+    }
+
+  .bannerContainer h1 {
+    text-align: start;
+    padding-left: 20px;
+  }
+}
+
+
+@media (min-width: 322px) and (max-width: 600px) {
+  .containerOffer {
+    // display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    }
+
+  .containerOffer a {
+    // margin-bottom: 30px;
+     min-height: 200px;
+     min-width: 200px;
+    }
+
+  .bannerContainer h1 {
+    text-align: start;
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .BannerContainer {
+    margin-bottom: 20px;
+  }
+  
+  .containerOffer {
+    // display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center; 
+    }
+
+  .containerOffer a {
+    // margin-bottom: 30px;
+     min-height: 200px;
+     min-width: 200px;
+     padding: 15px;
+    }
+
+  .bannerContainer h1 {
+    text-align: start;
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 901px) {
+  .BannerContainer {
+    margin-bottom: 20px;
+  }
+  
+  .containerOffer {
+    // display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center; 
+    }
+
+  .containerOffer a {
+    // margin-bottom: 30px;
+     min-height: 200px;
+     min-width: 200px;
+     padding: 15px;
+    }
+
+  .bannerContainer h1 {
+    text-align: start;
+    padding-left: 20px;
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+}
+

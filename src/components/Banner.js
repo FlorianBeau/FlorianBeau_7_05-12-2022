@@ -5,7 +5,7 @@ import "../styles/styleBanner.scss"
 const Banner = ({ imageSrc, title }) => {
   return (
     <div className="BannerContainer">
-      <img src={imageSrc} alt="Entête" />
+      <img src={imageSrc} alt="Entête"/>
       <div className="dark-filter"></div>
       {title && <h1>{title}</h1>}
     </div>
