@@ -8,7 +8,9 @@ a:link {
 
 .h1 {
   color: #FF6060;
-  font-size: 40px; }
+  font-size: 40px; 
+  text-align: start;
+}
 
 .localisation {
   color: #FF6060;
@@ -120,12 +122,10 @@ a:link {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 30px 0px;
 }
 
 .divContent {
     // border: solid 2px blue;
-    width: 773px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -145,7 +145,6 @@ a:link {
     flex-direction: row;
     border-radius: 14px;
     // border: solid 2px green;
-    width: 730px;
     z-index: 1;
 }
 
@@ -207,4 +206,46 @@ a:link {
   color: #FFFFFF;
   text-align: center;
   padding: 0 8px;
+}
+
+// Responsive with medias queries -------------------------------------------------------
+@media (max-width: 319px) {
+  .divUp {
+    min-width: 190px;
+    margin-bottom: 20px;
+  }
+
+  .divContent {
+    min-width: 190px;
+    margin-bottom: 20px;
+  }
+
+  .h1 {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+   .divUp {
+    min-width: 230px;
+    margin-bottom: 20px;
+  }
+
+  .divContent {
+    min-width: 190px;
+    margin-bottom: 20px; 
+  }
+
+   .h1 {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 601px) {
+.divContent {
+  width: 730px;
+}
+.divUp {
+  width: 730px;
+}
 }

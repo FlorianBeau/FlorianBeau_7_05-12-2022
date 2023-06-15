@@ -101,9 +101,6 @@ const Product = () => {
       <CollapseEquipment />
       </div>
     </main>
-               <br />
-           <br />
-
   </div>
    );
 }
