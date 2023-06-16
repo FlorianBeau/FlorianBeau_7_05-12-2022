@@ -79,10 +79,8 @@ const Product = () => {
         
         {/* Div content article author */}
           <div className="containerFlexDiv">
-            <div>
-              <img src={offer.host.picture} className="hostImg" alt="host of this accommodation" />
-            </div>
             <div className="hostFlex">
+              <img src={offer.host.picture} className="hostImg" alt="host of this accommodation" />
               <p>{offer.host.name}</p>
             </div>
             <div className="div_stars">

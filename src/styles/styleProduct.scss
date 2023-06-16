@@ -229,8 +229,15 @@ a:link {
   }
 
   .hostFlex {
+    display: flex;
+    flex-direction: row-reverse;
     text-align: right;
-    margin: 0px 10px;
+  }
+
+  .hostFlex p {
+    display: flex;
+    align-items: center;
+    margin: 0 4px;
   }
 
   .div_stars {
@@ -239,7 +246,7 @@ a:link {
   }
 
   .div_stars img {
-    width: 20px;
+    width: 15px;
   }
 }
 
@@ -262,10 +269,19 @@ a:link {
     flex-wrap: nowrap;
     flex-direction: row-reverse;
   }
-  .hostFlex {
+
+.hostFlex {
+    display: flex;
+    flex-direction: row-reverse;
     text-align: right;
-    margin: 0px 4px;
   }
+
+  .hostFlex p {
+    display: flex;
+    align-items: center;
+    margin: 0 4px;
+  }
+
    .div_stars {
     display: flex;
     align-items: center;
@@ -303,8 +319,11 @@ a:link {
   }
 
   .hostFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
     text-align: right;
-    margin: 0px 19px;
   }
 }
 
