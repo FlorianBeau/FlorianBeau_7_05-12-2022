@@ -24,21 +24,20 @@ a:link {
   background-color: #FF6060;
   width: auto;
   height: 40px;
-  text-align: center;
+  text-align: start;
   border-radius: 14px;
   display: flex;
   align-items: center;
   border:none;
-  margin: 0px 14px 0px 0px;
-  padding: 0px 30px 0px 30px;
+  margin: 0px 11px 11px 0px;
+  padding: 0px 11px 0px 11px;
 }
 
 .borderStyle {
   width: 820px; }
 
-.containerFlexDiv {
+.containerDivTags {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -83,13 +82,13 @@ a:link {
 }
 
 // Container host -------------------------------------------------------------------
-.hostFlex {
-  display: flex;
-  flex-wrap: wrap;
-  width: 50%;
-  align-items: center;
-  text-align: right;
-}
+// .hostFlex {
+//   display: flex;
+//   flex-wrap: wrap;
+//   width: 50%;
+//   align-items: center;
+//   text-align: right;
+// }
 
 .hostImg {
   border-radius: 50%;
@@ -118,10 +117,6 @@ a:link {
 // Container description ----------------------------------------------------------- //
 .containerDescriptionEquipement {
     text-align: left;
-    // border: solid 2px black;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .divContent {
@@ -209,7 +204,7 @@ a:link {
 }
 
 // Responsive with medias queries -------------------------------------------------------
-@media (max-width: 319px) {
+@media (min-width: 0px) and (max-width: 321px) {
   .divUp {
     min-width: 190px;
     margin-bottom: 20px;
@@ -223,9 +218,32 @@ a:link {
   .h1 {
     font-size: 34px;
   }
+  .tags {
+    width: 33px;
+    min-width: 100px;
+  }
+  .containerFlexDiv {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+  }
+
+  .hostFlex {
+    text-align: right;
+    margin: 0px 10px;
+  }
+
+  .div_stars {
+    display: flex;
+    align-items: center;
+  }
+
+  .div_stars img {
+    width: 20px;
+  }
 }
 
-@media (min-width: 320px) and (max-width: 600px) {
+@media (min-width: 322px) and (max-width: 424px) {
    .divUp {
     min-width: 230px;
     margin-bottom: 20px;
@@ -239,13 +257,89 @@ a:link {
    .h1 {
     font-size: 34px;
   }
+  .containerFlexDiv {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+  }
+  .hostFlex {
+    text-align: right;
+    margin: 0px 4px;
+  }
+   .div_stars {
+    display: flex;
+    align-items: center;
+    margin-right: 21px;
+  }
+  .div_stars img {
+    width: 30px;
+  }
 }
 
-@media (min-width: 601px) {
+@media (min-width: 424px) and (max-width: 800px) {
 .divContent {
-  width: 730px;
+  margin-bottom: 20px; 
 }
 .divUp {
-  width: 730px;
+  margin-bottom: 20px;
+}
+
+.containerFlexDiv {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+.containerDescriptionEquipement {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .div_stars {
+    display: flex;
+    align-items: center;
+    margin-right: 21px;
+  }
+
+  .hostFlex {
+    text-align: right;
+    margin: 0px 19px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 2000px) {
+  .containerDescriptionEquipement {
+        width: 773px;
+
+      display: flex;
+    width: 773px;
+  }
+
+  .divUp {
+    display: flex;
+    width: 773px;
+    padding: 0 22px;
+    margin-right: 20px;
+
+  }
+
+  .divContent {
+    // border: solid 2px blue;
+        width: 773px;
+
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: white;
+    border-radius: 14px;
+    background-color: #F0F0F0F0;
+    height: auto;
+}
+
+.containerFlexDiv {
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 }
