@@ -6,13 +6,13 @@ import arrowUp from "../assets/arrow_up.png"
 import { useParams } from "react-router-dom"
 
 const CollapseDescription = () => {
-  const [isShow, setIsShow] = useState(false);
+  const [isShow2, setIsShow2] = useState(false);
     const idOffer = useParams().id;
 
     // Recherche une offre dont l'id est égal à idOffer
     const offer = Offers.find((item) => item.id === idOffer)
 
-  return isShow ? (
+  return isShow2 ? (
     // First div (Description)
         <div className="divContent">
             <div className="divUp">
@@ -20,7 +20,7 @@ const CollapseDescription = () => {
                     <h3>Description</h3>
                 </div>
                 <div>
-                    <button className="divButton" onClick={() => setIsShow(false)}>
+                    <button className="divButton" onClick={() => setIsShow2(false)}>
                         <img src={arrowUp} alt="arrow_Up" />
                     </button>
                 </div>
@@ -36,7 +36,7 @@ const CollapseDescription = () => {
                     <h3 className="textWhite">Description</h3>
                 </div>
                 <div>
-                    <button className="divButton" onClick={() => setIsShow(true)}>
+                    <button className="divButton" onClick={() => setIsShow2(true)}>
                         <img src={arrowDown} alt="arrow_Down" />
                     </button>
                 </div>

@@ -14,7 +14,7 @@ const CollapseEquipment = () => {
 
   return isShow ? (
         // First div (Description)
-        <div className="divContent">
+       <div className="divContent">
             <div className="divUp">
                 <div>
                     <h3>Equipements</h3>
