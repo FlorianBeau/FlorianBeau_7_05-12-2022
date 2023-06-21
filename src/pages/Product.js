@@ -65,25 +65,29 @@ const Product = () => {
         <img src={`${offer.pictures[currentImgIndex]}`} className="imgSlider" alt="picturesSlider" />
           <button className="sliderButtonRight" onClick={slideNext}><img src={ButtonRight} alt="Right" className="arrowSlider" /></button>
       </div>
+      <div className="containerContentProduct"> {/*  CONTAINER PRODUCT (orange)---------------- */}
+       <div className="containerDivTags">  {/* container vert foncé ------------------*/}
+        <div>
           <h1 className="h1">{offer.title}</h1>
           <h2 className="localisation">{offer.location}</h2>
-      <div>
-        <br />
+        </div>
+        <div className="divTags">
         {/* Div content tags */}
-        <div className="containerDivTags">
             {offer.tags.map((tag, index) => {
               return (<div className="tags" key={index}><span>{tag}</span></div>)
             })}
+            </div>
         </div>
-        <br />
         
         {/* Div content article author */}
-          <div className="containerFlexDiv">
-            <div className="hostFlex">
+          <div className="containerFlexDiv"> {/* container marron -------------------*/}
+            <div className="hostFlex"> {/* container vert clair */}
               <img src={offer.host.picture} className="hostImg" alt="host of this accommodation" />
-              <p>{offer.host.name}</p>
+              <div className="authorName">
+               <p>{offer.host.name}</p>
+              </div>
             </div>
-            <div className="div_stars">
+            <div className="div_stars"> {/* container crème */}
               {[...Array(5)].map((star, index) => {
                 const ratingValue = index + 1;
                 return (
@@ -94,6 +98,8 @@ const Product = () => {
           </div>
 
       </div>
+
+
       <br />
       <div className="containerDescriptionEquipement">
       <CollapseDescription />

@@ -1,5 +1,6 @@
 * {
-  font-family: "Montserrat"; }
+  font-family: "Montserrat";
+}
 
 h1 {
   font-weight: 500; }
@@ -139,3 +140,16 @@ h1 {
   }
 }
 
+@media (min-width: 800px) and (max-width: 1024px) {
+.resolution-1024 {
+  max-width: 1024px;
+  margin: auto;
+}
+}
+
+@media (min-width: 1025px) and (max-width: 5000px) {
+.resolution-1440 {
+  max-width: 1440px;
+  margin: auto;
+}
+}

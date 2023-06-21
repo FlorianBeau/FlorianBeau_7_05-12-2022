@@ -90,6 +90,35 @@ a:link {
 //   text-align: right;
 // }
 
+.containerContentProduct {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.containerDivTags {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.divTags {
+  display: flex;
+}
+
+.hostFlex {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.authorName {
+  display: flex;
+  width: 108px;
+  text-align: end;
+  margin-right: 10px;
+}
+
 .hostImg {
   border-radius: 50%;
   height: 70px;
@@ -223,7 +252,7 @@ a:link {
     min-width: 100px;
   }
   .containerFlexDiv {
-    display: flex;
+    // display: flex;
     flex-wrap: nowrap;
     flex-direction: row-reverse;
   }
@@ -246,6 +275,8 @@ a:link {
   }
 
   .div_stars img {
+    display: flex;
+    justify-content: end;
     width: 15px;
   }
 }
@@ -266,8 +297,8 @@ a:link {
   }
   .containerFlexDiv {
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    // flex-direction: row-reverse;
   }
 
 .hostFlex {
@@ -327,20 +358,30 @@ a:link {
   }
 }
 
-@media (min-width: 800px) and (max-width: 2000px) {
+@media (min-width: 800px) and (max-width: 1023px) {
+
   .containerDescriptionEquipement {
     display: flex;
+    margin-bottom: 20px;
     justify-content: space-between;
   }
 
   .divUp {
-    width: 750px;
+    width: 380px;
     background-color:#FF6060;
     padding: 0 22px;
+    margin-bottom: 10px;
+}
+
+  .divUp2 {
+    width: 380px;
+    background-color:#FF6060;
+    padding: 0 22px;
+    margin-bottom: 20px;
 }
 
   .divContent {
-    width: 794px;
+    width: 380px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -348,12 +389,31 @@ a:link {
     border-radius: 14px;
     background-color: #F0F0F0F0;
     height: auto;
+    margin-bottom: 20px;
+}
 }
 
-.containerFlexDiv {
-  justify-content: space-between;
-  flex-wrap: wrap;
+@media (min-width: 1024px) and (max-width: 5000px) {
+  .containerDescriptionEquipement {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .divUp {
+    min-width: 300px;
+  }
+
+  .divUp2 {
+    min-width: 300px;
+  }
 }
+
+// .containerFlexDiv {
+//   // justify-content: space-between;
+//   // flex-wrap: wrap;
+// }
 
 // .divDescription {
 //   width: 773px;
@@ -376,4 +436,4 @@ a:link {
 //     background-color: #F0F0F0F0;
 //     height: auto;
 // }
-}
+
