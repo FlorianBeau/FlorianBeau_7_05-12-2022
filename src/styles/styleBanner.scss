@@ -13,14 +13,14 @@
 
   .BannerContainer img {
     z-index: 0;
-    border-radius: 15px;
+    border-radius: 7px;
     box-shadow: 1px 1px 4px silver;
     object-fit: cover;
 }
 
   .BannerContainer .dark-filter {
     z-index: 1;
-    border-radius: 15px;
+    border-radius: 7px;
     box-shadow: 1px 1px 4px silver;
     background-color: rgba(0, 0, 0, 0.3);
 }
@@ -31,6 +31,56 @@
     justify-content: center;
     align-items: center;
     color: white; 
-    text-align: center;
     margin: 0;
   }
+
+  // Responsive with medias queries -------------------------------------------------------
+@media (min-width: 0px) and (max-width: 319px) {
+  .BannerContainer {
+  height: 80px;
+  text-align: start;
+  margin: 0 20 0 20px;
+  max-width: 270px;
+}
+
+  .BannerContainer h1 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .BannerContainer {
+    height: 100px;
+  }
+  
+  .BannerContainer h1 {
+    width: 89px;
+    margin-left: 20px;
+    font-size: 24px;
+    min-width: 212px;
+    max-width: 221px;   
+    margin-right: 20px;
+    font-weight: 100;
+  }
+
+.aboutBanner {
+  height: 274px;
+  width: auto;
+}
+}
+
+@media (min-width: 768px) and (max-width: 2000px) {
+   .BannerContainer img {
+    z-index: 0;
+    border-radius: 15px;
+    box-shadow: 1px 1px 4px silver;
+    object-fit: cover;
+}
+ .BannerContainer .dark-filter {
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: 1px 1px 4px silver;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+}
+

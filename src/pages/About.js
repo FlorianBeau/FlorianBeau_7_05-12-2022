@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
-import BannerImage from "../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png";
+import BannerImage from "../assets/picture_aboutPage.png";
 import "../styles/styleProduct.scss";
 import "../styles/styleAbout.scss";
 import arrowDown from "../assets/arrow_down.png";
@@ -18,7 +18,7 @@ const About = () => {
     <div>
       <Header underlined={"about"} />
       <br/>
-      <Banner imageSrc={BannerImage} title="" />
+      <Banner imageSrc={BannerImage} />
       <br />
       {/* Collapse "Fiabilité" */}
       {isShow1 ? (

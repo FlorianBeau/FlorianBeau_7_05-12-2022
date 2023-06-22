@@ -1,6 +1,6 @@
 import React from "react"
 import Banner from "../components/Banner"
-import BannerImage from "../assets/IMG.png"
+import BannerImage from "../assets/picture_homePage.png"
 import Offers from "../data/data.json"
 import "../styles/styleHome.scss"
 import { NavLink } from "react-router-dom"
@@ -13,7 +13,7 @@ const Home = () => {
     <div>
       <Header underlined={"home"} />
       <br/>
-      <Banner imageSrc={BannerImage} title="Chez vous, partout et ailleurs"/>
+      <Banner imageSrc={BannerImage} className="titleBanner" title="Chez vous, partout et ailleurs"/>
       <div className="containerOffer">
         {Offers.map((offer) => (
           <NavLink key={offer.id} to={"/Fiche_logement/" + offer.id}>

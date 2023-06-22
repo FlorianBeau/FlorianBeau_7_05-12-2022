@@ -49,7 +49,7 @@ h1 {
   object-fit: cover; }
 
 // Responsive with medias queries -------------------------------------------------------
-@media (max-width: 321px) {
+@media (min-width:0px) and (max-width: 319px) {
   .containerOffer {
     // display: grid;
     grid-template-columns: 1fr;
@@ -66,25 +66,39 @@ h1 {
     text-align: start;
     padding-left: 20px;
   }
+
+  .titleBanner {
+    word-break: break-word;
+  }
 }
 
 
-@media (min-width: 322px) and (max-width: 600px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .containerOffer {
-    // display: grid;
+    display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     }
 
+  .containerDiv {
+    height: 280px;
+    width: 280px;
+    margin: 0 10%;
+  }
+
   .containerOffer a {
     // margin-bottom: 30px;
-     min-height: 200px;
-     min-width: 200px;
+     height: 350px;
+     width: 350px;
     }
 
   .bannerContainer h1 {
     text-align: start;
     padding-left: 20px;
+  }
+
+  .titleBanner {
+    word-break: break-word;
   }
 }
 

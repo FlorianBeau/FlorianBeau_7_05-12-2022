@@ -6,17 +6,22 @@ a:link {
   width: 90%;
   margin-left: 5%; }
 
-.h1 {
+h1 {
   color: #FF6060;
   font-size: 40px; 
   text-align: start;
+  font-weight: 100;
+}
+
+h2 {
+  font-weight: 100;
 }
 
 .localisation {
   color: #FF6060;
   font-size: 25px;
   line-height: 25.67px;
-  font-weight: 400; }
+  font-weight: 100; }
 
 // Container tags ---------------------------------------------------------------------
 .tags {
@@ -25,7 +30,7 @@ a:link {
   width: auto;
   height: 40px;
   text-align: start;
-  border-radius: 14px;
+  border-radius: 7px;
   display: flex;
   align-items: center;
   border:none;
@@ -44,7 +49,7 @@ a:link {
 // Container slider -------------------------------------------------------------------
 
 .sliderContainer {
-  border-radius: 25px;
+  border-radius: 7px;
   box-shadow: 1px 1px 4px silver;
   height: 415px;
   position: relative;
@@ -77,7 +82,7 @@ a:link {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 25px;
+  border-radius: 7px;
   position: absolute;
 }
 
@@ -154,7 +159,7 @@ a:link {
     flex-direction: column;
     justify-content: flex-start;
     color: white;
-    border-radius: 14px;
+    border-radius: 7px;
     // border: solid 2px red;
     background-color: #F0F0F0F0;
     height: auto;
@@ -167,7 +172,7 @@ a:link {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    border-radius: 14px;
+    border-radius: 7px;
     // border: solid 2px green;
     z-index: 1;
 }
@@ -233,7 +238,26 @@ a:link {
 }
 
 // Responsive with medias queries -------------------------------------------------------
-@media (min-width: 0px) and (max-width: 321px) {
+@media (min-width: 0px) and (max-width: 319px) {
+  .sliderContainer {
+    height: 274px;
+    width: auto;
+  }
+
+  .sliderButtonLeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 138px 0px;
+  }
+
+  .sliderButtonRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 138px 0px;
+  }
+
   .divUp {
     min-width: 190px;
     margin-bottom: 20px;
@@ -244,15 +268,16 @@ a:link {
     margin-bottom: 20px;
   }
 
-  .h1 {
-    font-size: 34px;
+  .divTags {
+    display: flex;
+    flex-wrap: wrap;
   }
   .tags {
     width: 33px;
     min-width: 100px;
   }
   .containerFlexDiv {
-    // display: flex;
+    display: flex;
     flex-wrap: nowrap;
     flex-direction: row-reverse;
   }
@@ -281,8 +306,28 @@ a:link {
   }
 }
 
-@media (min-width: 322px) and (max-width: 424px) {
-   .divUp {
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .sliderContainer {
+    height: 274px;
+    width: auto;
+  }
+
+  .sliderButtonLeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 138px 0px;
+  }
+
+  .sliderButtonRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 138px 0px;
+  }
+  
+  .divUp {
     min-width: 230px;
     margin-bottom: 20px;
   }
@@ -292,13 +337,13 @@ a:link {
     margin-bottom: 20px; 
   }
 
-   .h1 {
-    font-size: 34px;
+   h1, h2 {
+    font-size: 20px;
+
   }
   .containerFlexDiv {
     display: flex;
-    flex-wrap: wrap;
-    // flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
 
 .hostFlex {
@@ -316,7 +361,6 @@ a:link {
    .div_stars {
     display: flex;
     align-items: center;
-    margin-right: 21px;
   }
   .div_stars img {
     width: 30px;
@@ -339,6 +383,7 @@ a:link {
   }
 
 .containerDescriptionEquipement {
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
@@ -386,7 +431,7 @@ a:link {
     flex-direction: column;
     justify-content: flex-start;
     color: white;
-    border-radius: 14px;
+    border-radius: 7px;
     background-color: #F0F0F0F0;
     height: auto;
     margin-bottom: 20px;
@@ -432,7 +477,7 @@ a:link {
 //     flex-direction: column;
 //     justify-content: flex-start;
 //     color: white;
-//     border-radius: 14px;
+ //   border-radius: 7px;
 //     background-color: #F0F0F0F0;
 //     height: auto;
 // }

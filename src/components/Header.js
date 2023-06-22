@@ -5,7 +5,7 @@ import "../styles/styleHeader.scss";
 
 // Composant permettant l'affichage du Header
 const Header = ({ underlined }) => {
-  const selectedStyle = { borderBottom: "2px red solid" };
+  const selectedStyle = { borderBottom: "1.5px red solid" };
   const notSelectedStyle = { borderBottom: "0" };
   
   // Affichage du visuel retourné par la fonction: des divs contenants les composants Logo
