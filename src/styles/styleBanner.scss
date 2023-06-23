@@ -45,6 +45,13 @@
 
   .BannerContainer h1 {
     font-size: 18px;
+    text-align: start;
+    padding-left: 20px;
+    font-weight: 100;
+  }
+
+  .titleBanner {
+    word-break: break-word;
   }
 }
 
@@ -60,6 +67,9 @@
     min-width: 212px;
     max-width: 221px;   
     margin-right: 20px;
+    font-weight: 100;
+    text-align: start;
+    padding-left: 20px;
     font-weight: 100;
   }
 
