@@ -2,8 +2,17 @@
   font-family: "Montserrat";
 }
 
+#root {
+  max-width: 1440px;
+  margin: auto;
+}
+
 h1 {
   font-weight: 500; }
+
+h3, p {
+  font-weight: 100;
+}
 
 .containerOffer {
   display: grid;
@@ -50,17 +59,22 @@ h1 {
 
 // Responsive with medias queries -------------------------------------------------------
 @media (min-width:0px) and (max-width: 319px) {
-  .containerOffer {
-    // display: grid;
+ .containerOffer {
+    display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     }
 
-  .containerOffer a {
+    .containerOffer a {
     // margin-bottom: 30px;
-     min-height: 200px;
-     min-width: 200px;
+     width: 0px;
     }
+
+  .containerDiv {
+    height: 323px;
+    width: 323px;
+    margin: 0 4%;
+  }
 
   .bannerContainer h1 {
     text-align: start;
@@ -72,25 +86,25 @@ h1 {
   }
 }
 
+// --------------------------------------------------------------------------------------
 
-@media (min-width: 320px) and (max-width: 600px) {
+@media (min-width: 375px) and (max-width: 600px) {
   .containerOffer {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     }
 
-  .containerDiv {
-    height: 280px;
-    width: 280px;
-    margin: 0 10%;
-  }
-
-  .containerOffer a {
+    .containerOffer a {
     // margin-bottom: 30px;
-     height: 350px;
-     width: 350px;
+     width: 0px;
     }
+
+  .containerDiv {
+    height: 303px;
+    width: 303px;
+    margin: 0 4%;
+  }
 
   .bannerContainer h1 {
     text-align: start;
@@ -101,6 +115,7 @@ h1 {
     word-break: break-word;
   }
 }
+// --------------------------------------------------------------------------------------
 
 @media (min-width: 601px) and (max-width: 900px) {
   .BannerContainer {
@@ -154,16 +169,16 @@ h1 {
   }
 }
 
-@media (min-width: 800px) and (max-width: 1024px) {
-.resolution-1024 {
-  max-width: 1024px;
-  margin: auto;
-}
-}
+// @media (min-width: 800px) and (max-width: 1024px) {
+// .resolution-1024 {
+//   max-width: 1024px;
+//   margin: auto;
+// }
+// }
 
-@media (min-width: 1025px) and (max-width: 5000px) {
-.resolution-1440 {
-  max-width: 1440px;
-  margin: auto;
-}
-}
+// @media (min-width: 1025px) and (max-width: 5000px) {
+// .resolution-1440 {
+//   max-width: 1440px;
+//   margin: auto;
+// }
+// }

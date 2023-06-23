@@ -326,10 +326,37 @@ h2 {
     justify-content: flex-end;
     padding: 138px 0px;
   }
+
+  .dimension {
+    width: 17px;
+  }
+
+  .containerDivTags h1 {
+    font-size: 23px;
+    font-weight: 100;
+  }
   
   .divUp {
     min-width: 230px;
     margin-bottom: 20px;
+  }
+
+  .divTags {
+    width: 303px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .div_img {
+    width: 303px;
+  }
+
+   .div_txt {
+    width: 303px;
+  }
+
+  .tags {
+    width: 128px;
   }
 
   .divContent {
@@ -337,13 +364,15 @@ h2 {
     margin-bottom: 20px; 
   }
 
-   h1, h2 {
-    font-size: 20px;
-
+  .localisation {
+    font-size: 17px;
   }
+
   .containerFlexDiv {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 303px;
   }
 
 .hostFlex {
@@ -363,8 +392,15 @@ h2 {
     align-items: center;
   }
   .div_stars img {
-    width: 30px;
+    width: 20px;
   }
+
+  .authorName {
+  display: flex;
+  width: 89px;
+  text-align: end;
+  margin-right: 10px;
+}
 }
 
 @media (min-width: 424px) and (max-width: 800px) {

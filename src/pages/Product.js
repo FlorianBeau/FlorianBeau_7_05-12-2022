@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Navigate, useNavigate  } from "react-router-dom"
 import Header from "../components/Header"
 import "../styles/styleProduct.scss"
 import Offers from "../data/data.json"
@@ -12,11 +12,17 @@ import CollapseEquipment from "../components/CollapseEquipment"
 
 const Product = () => {
   const idOffer = useParams().id
+   // Recherche une offre dont l'id est égal à idOffer
+       const navigate = useNavigate();
+
+  const offer = Offers.find((item) => item.id === idOffer)
+  console.log(offer);
+  
+  if (!offer) {
+   navigate("/404");
+  }
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
   const [stars, setStars] = useState([])
-
-  // Recherche une offre dont l'id est égal à idOffer
-  const offer = Offers.find((item) => item.id === idOffer)
 
   // Affichage de la note du logement (nombres d'étoiles)
   const starMaker = (rating) => {
@@ -61,9 +67,9 @@ const Product = () => {
     {/* Container contenant le slider */}
     <main className="main">
       <div className="sliderContainer">
-          <button className="sliderButtonLeft" onClick={slidePrev}><img src={ButtonLeft} alt="Left" className="arrowSlider" /></button>
+          <button className="sliderButtonLeft" onClick={slidePrev}><img src={ButtonLeft} alt="Left" className="arrowSlider dimension" /></button>
         <img src={`${offer.pictures[currentImgIndex]}`} className="imgSlider" alt="picturesSlider" />
-          <button className="sliderButtonRight" onClick={slideNext}><img src={ButtonRight} alt="Right" className="arrowSlider" /></button>
+          <button className="sliderButtonRight" onClick={slideNext}><img src={ButtonRight} alt="Right" className="arrowSlider dimension" /></button>
       </div>
       <div className="containerContentProduct"> {/*  CONTAINER PRODUCT (orange)---------------- */}
        <div className="containerDivTags">  {/* container vert foncé ------------------*/}
