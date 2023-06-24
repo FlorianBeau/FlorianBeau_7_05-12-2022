@@ -64,6 +64,7 @@ h2 {
   right: 0;
   z-index: 1;
   padding: 170px 0px;
+  cursor: pointer;
   }
 
   .sliderButtonLeft {
@@ -75,7 +76,7 @@ h2 {
   left: 0;
   z-index: 1;
   padding: 170px 0px;
-
+  cursor: pointer;
   }
 
 .imgSlider {
@@ -110,11 +111,6 @@ h2 {
 
 .divTags {
   display: flex;
-}
-
-.hostFlex {
-  display: flex;
-  flex-direction: row-reverse;
 }
 
 .authorName {
@@ -306,7 +302,7 @@ h2 {
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 800px) {
 
   .sliderContainer {
     height: 274px;
@@ -342,11 +338,9 @@ h2 {
   }
 
   .divTags {
-    width: 303px;
     display: flex;
     flex-wrap: wrap;
   }
-
 
   .tags {
     width: 128px;
@@ -365,7 +359,7 @@ h2 {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    width: 303px;
+    width: 100%;
   }
 
 .hostFlex {
@@ -396,66 +390,72 @@ h2 {
 }
 }
 
-@media (min-width: 424px) and (max-width: 800px) {
-.divContent {
-  margin-bottom: 20px; 
-}
-.divUp {
-  margin-bottom: 20px;
-}
+// @media (min-width: 767px) and (max-width: 800px) {
+// .divContent {
+//   margin-bottom: 20px; 
+// }
+// .divUp {
+//   margin-bottom: 20px;
+// }
 
-.containerFlexDiv {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
+// .containerFlexDiv {
+//     display: flex;
+//     flex-wrap: nowrap;
+//     flex-direction: row-reverse;
+//     justify-content: space-between;
+//     width: 100%;
+//   }
 
-.containerDescriptionEquipement {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
+// .containerDescriptionEquipement {
+//     display: flex;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+//   }
 
-  .div_stars {
-    display: flex;
-    align-items: center;
-    margin-right: 21px;
-  }
+//   .div_stars {
+//     display: flex;
+//     align-items: center;
+//     margin-right: 21px;
+//   }
 
-  .hostFlex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row-reverse;
-    text-align: right;
-  }
-}
+//   .hostFlex {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     flex-direction: row-reverse;
+//     text-align: right;
+//   }
 
-@media (min-width: 800px) and (max-width: 1023px) {
+//   .divTags {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+// }
+
+@media (min-width: 801px) and (max-width: 1023px) {
 
   .containerDescriptionEquipement {
     display: flex;
-    margin-bottom: 20px;
     justify-content: space-between;
+    margin-bottom: 20px;
   }
 
   .divUp {
-    width: 380px;
     background-color:#FF6060;
     padding: 0 22px;
     margin-bottom: 10px;
+    min-width: 350px;
 }
 
   .divUp2 {
-    width: 380px;
     background-color:#FF6060;
     padding: 0 22px;
     margin-bottom: 20px;
+    min-width: 350px;
 }
 
   .divContent {
-    width: 380px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -465,6 +465,23 @@ h2 {
     height: auto;
     margin-bottom: 20px;
 }
+.hostFlex {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.containerFlexDiv {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .div_stars {
+    display: flex;
+    align-items: center;
+    margin-right: 21px;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 5000px) {
@@ -476,18 +493,37 @@ h2 {
     margin: 0;
   }
   .divUp {
-    min-width: 300px;
+    min-width: 350px;
   }
 
   .divUp2 {
-    min-width: 300px;
+    min-width: 350px;
   }
 }
 
-// .containerFlexDiv {
-//   // justify-content: space-between;
-//   // flex-wrap: wrap;
-// }
+.containerFlexDiv {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hostFlex {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.div_stars {
+    display: flex;
+    align-items: center;
+    margin: 21px 0px 0px 0px;
+  }
+
+.authorName {
+  width: 81px;
+}
+
+.divContent {
+    width: 350px;
+
+}
 
 // .divDescription {
 //   width: 773px;
@@ -510,4 +546,3 @@ h2 {
 //     background-color: #F0F0F0F0;
 //     height: auto;
 // }
-

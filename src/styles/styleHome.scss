@@ -63,12 +63,7 @@ h3, p {
     display: grid;
     grid-template-columns: 1fr;
     // justify-content: center;
-    margin: 0 8%;
-    }
-
-    .containerOffer a {
-    // margin-bottom: 30px;
-    //  width: 0px;
+    margin: 0 5%;
     }
 
   .containerDiv {
@@ -83,10 +78,6 @@ h3, p {
 
   .containerDiv p {
     font-size: 11px;
-  }
-  
-   .div_txt {
-    // width: 303px;
   }
 
   .div_img {
@@ -107,17 +98,12 @@ h3, p {
 
 // --------------------------------------------------------------------------------------
 
-@media (min-width: 375px) and (max-width: 600px) {
+@media (min-width: 375px) and (max-width: 530px) {
   .containerOffer {
     display: grid;
     grid-template-columns: 1fr;
     // justify-content: center;
-    margin: 0 8%;
-    }
-
-    .containerOffer a {
-    // margin-bottom: 30px;
-    //  width: 0px;
+    margin: 0 5%;
     }
 
   .containerDiv {
@@ -134,7 +120,32 @@ h3, p {
 }
 // --------------------------------------------------------------------------------------
 
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 531px) and (max-width: 900px) {
+  .BannerContainer {
+    margin-bottom: 20px;
+  }
+  
+  .containerOffer {
+    // display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center; 
+    }
+
+  .containerOffer a {
+    // margin-bottom: 30px;
+     min-height: 200px;
+     min-width: 200px;
+     padding: 15px;
+    }
+
+  .bannerContainer h1 {
+    text-align: start;
+    padding-left: 20px;
+  }
+
+}
+
+@media (min-width: 901px) and (max-width:1200px) {
   .BannerContainer {
     margin-bottom: 20px;
   }
@@ -149,36 +160,57 @@ h3, p {
     // margin-bottom: 30px;
      min-height: 200px;
      min-width: 200px;
-     padding: 15px;
+     padding: 30px 30px;
     }
 
   .bannerContainer h1 {
     text-align: start;
     padding-left: 20px;
   }
+
+   .div_txt h3 {
+    font-size: 18px;
+  }
+
+   .div_txt p {
+    font-size: 14px;
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+
 }
 
-@media (min-width: 901px) {
-  .BannerContainer {
+@media (min-width: 1200px) and (max-width:1440px) {
+   .BannerContainer {
     margin-bottom: 20px;
   }
   
   .containerOffer {
-    // display: grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center; 
+    justify-items: center;
     }
 
   .containerOffer a {
     // margin-bottom: 30px;
-     min-height: 200px;
-     min-width: 200px;
-     padding: 15px;
+     height: 300px;
+     width: 300px;
+     padding: 30px 20px 0px 20px;
     }
 
   .bannerContainer h1 {
     text-align: start;
     padding-left: 20px;
+  }
+
+   .div_txt h3 {
+    font-size: 20px;
+  }
+
+   .div_txt p {
+    font-size: 16px;
   }
 
   .footer {
@@ -186,16 +218,39 @@ h3, p {
   }
 }
 
-// @media (min-width: 800px) and (max-width: 1024px) {
-// .resolution-1024 {
-//   max-width: 1024px;
-//   margin: auto;
-// }
-// }
+@media (min-width: 1441px) {
+   .BannerContainer {
+    margin-bottom: 20px;
+  }
+  
+  .containerOffer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
 
-// @media (min-width: 1025px) and (max-width: 5000px) {
-// .resolution-1440 {
-//   max-width: 1440px;
-//   margin: auto;
-// }
-// }
+    }
+
+  .containerOffer a {
+    // margin-bottom: 30px;
+     height: 350px;
+     width: 350px;
+     padding: 40px 40px 20px 40px;
+    }
+
+  .bannerContainer h1 {
+    text-align: start;
+    padding-left: 20px;
+  }
+
+   .div_txt h3 {
+    font-size: 20px;
+  }
+
+   .div_txt p {
+    font-size: 16px;
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+}

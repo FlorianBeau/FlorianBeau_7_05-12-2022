@@ -18,9 +18,10 @@ const Product = () => {
   const offer = Offers.find((item) => item.id === idOffer)
   console.log(offer);
   
-  if (!offer) {
-   navigate("/404");
-  }
+  if (offer === undefined) {
+    navigate("/404");
+   }
+
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
   const [stars, setStars] = useState([])
 
@@ -37,7 +38,7 @@ const Product = () => {
     // Affectation de la note
     starMaker(offer.rating)
     // console.log(offer.host.picture); // <---------------------------------- TEST
-  }, [offer.rating])
+  }, [])
 
   // Composant permettant de créer le slider (image précédente)
   const slidePrev = () => {
