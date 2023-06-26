@@ -17,7 +17,7 @@ const Product = () => {
        const navigate = useNavigate();
 
   const offer = Offers.find((item) => item.id === idOffer)
-  
+
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
   const [stars, setStars] = useState([])
 
@@ -35,7 +35,7 @@ const Product = () => {
     if (offer) {
     starMaker(offer.rating)
     }
-  }, [])
+  }, [offer])
 
 if (offer) {
 

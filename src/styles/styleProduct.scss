@@ -245,6 +245,10 @@ h2 {
     flex-direction: row-reverse;
   }
 
+  .dimension {
+    width: 17px;
+  }
+
   .hostFlex {
     display: flex;
     flex-direction: row-reverse;
@@ -264,7 +268,7 @@ h2 {
 
   .div_stars img {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: 15px;
   }
 }
