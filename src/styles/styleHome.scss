@@ -7,6 +7,10 @@
   margin: auto;
 }
 
+body {
+  margin-bottom: 0;
+}
+
 h1 {
   font-weight: 500; }
 
@@ -56,6 +60,33 @@ h3, p {
   height: 100%;
   border-radius: 15px;
   object-fit: cover; }
+
+// --------------------------------------------------------------- Footer
+
+.footer {
+  height: 200px;
+  width: 100%;
+  background-color:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.logoFooter {
+ color: #FFFFFF;
+}
+
+.paragraphFooter {
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0 8px;
+}
+
+.footer img {
+  height: 23px;
+}
 
 // Responsive with medias queries -------------------------------------------------------
 @media (min-width:0px) and (max-width: 378px) {
@@ -174,10 +205,6 @@ h3, p {
 
    .div_txt p {
     font-size: 14px;
-  }
-
-  .footer {
-    margin-top: 20px;
   }
 
 }

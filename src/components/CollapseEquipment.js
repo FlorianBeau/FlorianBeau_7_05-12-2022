@@ -33,7 +33,7 @@ const CollapseEquipment = () => {
             </div>
         </div>
                 ) : (
-        <div>
+        <div  className="collapseWidth">
             <div className="divUp">
                 <div>
                     <h3 className="textWhite">Equipements</h3>

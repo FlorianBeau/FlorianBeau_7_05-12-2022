@@ -30,7 +30,7 @@ const CollapseDescription = () => {
             </div>
         </div>
                 ) : (
-        <div>
+        <div className="collapseWidth">
             <div className="divUp">
                 <div>
                     <h3 className="textWhite">Description</h3>
