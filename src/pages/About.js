@@ -15,7 +15,7 @@ const About = () => {
 
 
   return (
-    <div>
+    <div className="pageContainer">
       <Header underlined={"about"} />
       <br/>
       <Banner imageSrc={BannerImage} />

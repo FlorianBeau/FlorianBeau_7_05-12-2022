@@ -32,6 +32,7 @@
     align-items: center;
     color: white; 
     margin: 0;
+    font-weight: 100;
   }
 
   // Responsive with medias queries -------------------------------------------------------
@@ -79,7 +80,7 @@
 }
 }
 
-@media (min-width: 768px) and (max-width: 2000px) {
+@media (min-width: 768px) and (max-width: 1023px) {
    .BannerContainer img {
     z-index: 0;
     border-radius: 15px;
@@ -91,6 +92,24 @@
     border-radius: 15px;
     box-shadow: 1px 1px 4px silver;
     background-color: rgba(0, 0, 0, 0.3);
-}
+    
+  .BannerContainer {
+    margin-bottom: 20px;
+  }
 }
 
+.BannerContainer h1 {
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 1024px) and (max-width: 5000px) {
+.BannerContainer h1 {
+  text-align: center;
+  font-size: 50px;
+  }
+.BannerContainer {
+  margin-bottom: 40px;
+}
+}

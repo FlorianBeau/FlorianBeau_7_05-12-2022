@@ -31,3 +31,22 @@ a:link {
   color: #FF6060;
 }
 
+@media (min-width: 0px) and (max-width: 762px) {
+  .title404 {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 763px) and (max-width: 1023px) {
+  .title404 {
+    font-size: 9rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media  (min-width:1024px) and (max-width: 5000px) {
+  .title404 {
+    font-size: 11rem;
+    margin-bottom: 70px;
+  }
+}

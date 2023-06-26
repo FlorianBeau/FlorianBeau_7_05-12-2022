@@ -88,13 +88,6 @@ h2 {
 }
 
 // Container host -------------------------------------------------------------------
-// .hostFlex {
-//   display: flex;
-//   flex-wrap: wrap;
-//   width: 50%;
-//   align-items: center;
-//   text-align: right;
-// }
 
 .containerContentProduct {
   display: flex;
@@ -150,13 +143,11 @@ h2 {
 }
 
 .divContent {
-    // border: solid 2px blue;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     color: white;
     border-radius: 7px;
-    // border: solid 2px red;
     background-color: #F0F0F0F0;
     height: auto;
 }
@@ -169,7 +160,6 @@ h2 {
     justify-content: space-between;
     flex-direction: row;
     border-radius: 7px;
-    // border: solid 2px green;
     z-index: 1;
 }
 

@@ -10,7 +10,7 @@ import Header from "../components/Header"
 disponibles sur la page d'accueil */
 const Home = () => {
   return (
-    <div>
+    <div className="pageContainer">
       <Header underlined={"home"} />
       <br/>
       <Banner imageSrc={BannerImage} className="titleBanner" title="Chez vous, partout et ailleurs"/>

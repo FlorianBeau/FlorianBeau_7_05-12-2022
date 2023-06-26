@@ -7,9 +7,9 @@ import "../styles/styleError404.scss"
 
 const Error404 = () => {
   return (
-    <div>
+    <div className="pageContainer">
       <Header underlined={"about"} />
-      <div>
+      <div className="title404Div">
         <h1 className="title404">404</h1>
         <h2 className="oups">Oups! La page que vous demandez n'existe pas.</h2>
         <h3 className="backlink"><a className="link" href="/">Retourner vers la page d'accueil</a></h3>

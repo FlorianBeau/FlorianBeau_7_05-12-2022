@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { useParams, Navigate, useNavigate  } from "react-router-dom"
+import { useParams, Navigate, useNavigate, Redirect  } from "react-router-dom"
 import Header from "../components/Header"
 import "../styles/styleProduct.scss"
 import Offers from "../data/data.json"
@@ -9,6 +9,7 @@ import greyStar from "../assets/grey_star.png"
 import redStar from "../assets/red_star.png"
 import CollapseDescription from "../components/CollapseDescription"
 import CollapseEquipment from "../components/CollapseEquipment"
+import Error404 from "./Error404"
 
 const Product = () => {
   const idOffer = useParams().id
@@ -16,12 +17,7 @@ const Product = () => {
        const navigate = useNavigate();
 
   const offer = Offers.find((item) => item.id === idOffer)
-  console.log(offer);
   
-  if (offer === undefined) {
-    navigate("/404");
-   }
-
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
   const [stars, setStars] = useState([])
 
@@ -36,9 +32,12 @@ const Product = () => {
 
   useEffect(() => {
     // Affectation de la note
+    if (offer) {
     starMaker(offer.rating)
-    // console.log(offer.host.picture); // <---------------------------------- TEST
+    }
   }, [])
+
+if (offer) {
 
   // Composant permettant de créer le slider (image précédente)
   const slidePrev = () => {
@@ -62,7 +61,7 @@ const Product = () => {
 
   // Affichage du rendu visuel dans la fiche logement
  return (
-  <div>
+  <div className="pageContainer">
     <Header />
     <br/>
     {/* Container contenant le slider */}
@@ -103,10 +102,7 @@ const Product = () => {
               })}
             </div>
           </div>
-
       </div>
-
-
       <br />
       <div className="containerDescriptionEquipement">
       <CollapseDescription />
@@ -115,7 +111,8 @@ const Product = () => {
     </main>
   </div>
    );
+} else {
+  return(<Error404 />)
 }
-
-
+}
 export default Product;

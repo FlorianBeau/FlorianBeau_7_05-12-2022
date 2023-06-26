@@ -2,7 +2,7 @@
   font-family: "Montserrat";
 }
 
-#root {
+.pageContainer {
   max-width: 1440px;
   margin: auto;
 }
@@ -21,10 +21,9 @@ h3, p {
 .containerOffer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  // padding: 31px 20px;
   margin: 0 5%;
   border-radius: 15px;
-  background-color: #F7F7F7; }
+}
 
 .containerOffer a {
   padding: 30px 0px 4px 0px;
@@ -88,19 +87,20 @@ h3, p {
   height: 23px;
 }
 
+.footerWidth {
+  margin: 0 -8px;
+}
+
 // Responsive with medias queries -------------------------------------------------------
 @media (min-width:0px) and (max-width: 378px) {
   .containerOffer {
     display: grid;
     grid-template-columns: 1fr;
-    // justify-content: center;
     margin: 0 5%;
     }
 
   .containerDiv {
     height: 190px;
-    // width: 303px;
-    // margin: 0 4%;
   }
 
   .containerDiv h3 {
@@ -117,11 +117,6 @@ h3, p {
     width: 100%;
   }
 
-  .bannerContainer h1 {
-    text-align: start;
-    padding-left: 20px;
-  }
-
   .titleBanner {
     word-break: break-word;
   }
@@ -133,14 +128,12 @@ h3, p {
   .containerOffer {
     display: grid;
     grid-template-columns: 1fr;
-    // justify-content: center;
     margin: 0 5%;
     }
 
   .containerDiv {
     height: 303px;
-    // width: 303px;
-    // margin: 0 4%;
+
   }
 
   .div_img {
@@ -152,43 +145,41 @@ h3, p {
 // --------------------------------------------------------------------------------------
 
 @media (min-width: 531px) and (max-width: 900px) {
-  .BannerContainer {
-    margin-bottom: 20px;
-  }
   
   .containerOffer {
-    // display: grid;
     grid-template-columns: 1fr;
     justify-content: center; 
+    background-color: #F7F7F7;
     }
 
   .containerOffer a {
-    // margin-bottom: 30px;
      min-height: 200px;
      min-width: 200px;
      padding: 15px;
     }
 
+  .BannerContainer {
+    margin-bottom: 20px;
+  }
+
   .bannerContainer h1 {
     text-align: start;
     padding-left: 20px;
   }
-
 }
 
 @media (min-width: 901px) and (max-width:1200px) {
   .BannerContainer {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   
   .containerOffer {
-    // display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center; 
-    }
+    justify-content: center;
+    background-color: #F7F7F7; } 
+  
 
   .containerOffer a {
-    // margin-bottom: 30px;
      min-height: 200px;
      min-width: 200px;
      padding: 30px 30px;
@@ -211,17 +202,17 @@ h3, p {
 
 @media (min-width: 1200px) and (max-width:1440px) {
    .BannerContainer {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   
   .containerOffer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
+    background-color: #F7F7F7;
     }
 
   .containerOffer a {
-    // margin-bottom: 30px;
      height: 300px;
      width: 300px;
      padding: 30px 20px 0px 20px;
@@ -246,19 +237,15 @@ h3, p {
 }
 
 @media (min-width: 1441px) {
-   .BannerContainer {
-    margin-bottom: 20px;
-  }
   
   .containerOffer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-        justify-items: center;
-
+    justify-items: center;
+    background-color: #F7F7F7;
     }
 
   .containerOffer a {
-    // margin-bottom: 30px;
      height: 350px;
      width: 350px;
      padding: 40px 40px 20px 40px;
