@@ -57,6 +57,8 @@ if (offer) {
     }
   }
 
+  console.log(offer.pictures.length);
+
   const rating = offer.rating;
 
   // Affichage du rendu visuel dans la fiche logement
@@ -66,13 +68,21 @@ if (offer) {
     <br/>
     {/* Container contenant le slider */}
     <main className="main">
-      <div className="sliderContainer">
-          <button className="sliderButtonLeft" onClick={slidePrev}><img src={ButtonLeft} alt="Left" className="arrowSlider dimension" /></button>
+
+{/* Condition pour afficher les flèche que si il y a plus de une image par id produit */}
+{ offer.pictures.length > 1 ? (
+    <div className="sliderContainer">
+        <button className="sliderButtonLeft" onClick={slidePrev}><img src={ButtonLeft} alt="Left" className="arrowSlider dimension" /></button>
         <img src={`${offer.pictures[currentImgIndex]}`} className="imgSlider" alt="picturesSlider" />
-          <button className="sliderButtonRight" onClick={slideNext}><img src={ButtonRight} alt="Right" className="arrowSlider dimension" /></button>
-      </div>
-      <div className="containerContentProduct"> {/*  CONTAINER PRODUCT (orange)---------------- */}
-       <div className="containerDivTags">  {/* container vert foncé ------------------*/}
+        <button className="sliderButtonRight" onClick={slideNext}><img src={ButtonRight} alt="Right" className="arrowSlider dimension" /></button>
+    </div>
+    ) : (<div className="sliderContainer">
+        <img src={`${offer.pictures[currentImgIndex]}`} className="imgSlider" alt="picturesSlider" />
+    </div>)
+  }
+
+      <div className="containerContentProduct">
+       <div className="containerDivTags">  
         <div>
           <h1 className="h1">{offer.title}</h1>
           <h2 className="localisation">{offer.location}</h2>
@@ -86,14 +96,14 @@ if (offer) {
         </div>
         
         {/* Div content article author */}
-          <div className="containerFlexDiv"> {/* container marron -------------------*/}
-            <div className="hostFlex"> {/* container vert clair */}
+          <div className="containerFlexDiv">
+            <div className="hostFlex"> 
               <img src={offer.host.picture} className="hostImg" alt="host of this accommodation" />
               <div className="authorName">
                <p>{offer.host.name}</p>
               </div>
             </div>
-            <div className="div_stars"> {/* container crème */}
+            <div className="div_stars">
               {[...Array(5)].map((star, index) => {
                 const ratingValue = index + 1;
                 return (
