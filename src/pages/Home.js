@@ -2,7 +2,7 @@ import React from "react"
 import Banner from "../components/Banner"
 import BannerImage from "../assets/picture_homePage.png"
 import Offers from "../data/data.json"
-import "../styles/styleHome.scss"
+import "../styles/styleHome.css"
 import { NavLink } from "react-router-dom"
 import Header from "../components/Header"
 

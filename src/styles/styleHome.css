@@ -60,7 +60,7 @@ h3, p {
   border-radius: 15px;
   object-fit: cover; }
 
-// --------------------------------------------------------------- Footer
+/* // --------------------------------------------------------------- Footer */
 
 .footer {
   height: 200px;
@@ -91,7 +91,7 @@ h3, p {
   margin: 0 -8px;
 }
 
-// Responsive with medias queries -------------------------------------------------------
+/* // Responsive with medias queries ------------------------------------------------------- */
 @media (min-width:0px) and (max-width: 378px) {
   .containerOffer {
     display: grid;
@@ -122,7 +122,7 @@ h3, p {
   }
 }
 
-// --------------------------------------------------------------------------------------
+/* // -------------------------------------------------------------------------------------- */
 
 @media (min-width: 375px) and (max-width: 530px) {
   .containerOffer {
@@ -142,9 +142,12 @@ h3, p {
     width: 100%;
   }
 }
-// --------------------------------------------------------------------------------------
+/* // -------------------------------------------------------------------------------------- */
 
 @media (min-width: 531px) and (max-width: 900px) {
+  .pageContainer {
+   margin: 0px auto 50px auto; 
+  }
   
   .containerOffer {
     grid-template-columns: 1fr;
@@ -158,7 +161,7 @@ h3, p {
      padding: 15px;
     }
 
-  .BannerContainer {
+  .bannerContainer {
     margin-bottom: 20px;
   }
 
@@ -169,7 +172,11 @@ h3, p {
 }
 
 @media (min-width: 901px) and (max-width:1200px) {
-  .BannerContainer {
+  .pageContainer {
+    margin: 0px auto 50px auto; 
+  }
+  
+  .bannerContainer {
     margin-bottom: 40px;
   }
   
@@ -201,7 +208,11 @@ h3, p {
 }
 
 @media (min-width: 1200px) and (max-width:1440px) {
-   .BannerContainer {
+  .pageContainer {
+    margin: 0px auto 70px auto; 
+  }
+  
+  .bannerContainer {
     margin-bottom: 40px;
   }
   
@@ -248,7 +259,7 @@ h3, p {
   .containerOffer a {
      height: 350px;
      width: 350px;
-     padding: 40px 40px 20px 40px;
+     padding: 40px 40px 40px 40px;
     }
 
   .bannerContainer h1 {
@@ -266,5 +277,9 @@ h3, p {
 
   .footer {
     margin-top: 20px;
+  }
+
+  .pageContainer {
+    margin: 0px auto 70px auto; 
   }
 }

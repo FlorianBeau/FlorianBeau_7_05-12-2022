@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo.js";
-import "../styles/styleHeader.scss";
+import "../styles/styleHeader.css";
 
 // Composant permettant l'affichage du Header
 const Header = ({ underlined }) => {

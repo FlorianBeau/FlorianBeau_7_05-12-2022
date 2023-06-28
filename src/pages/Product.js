@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useParams, Navigate, useNavigate, Redirect  } from "react-router-dom"
 import Header from "../components/Header"
-import "../styles/styleProduct.scss"
+import "../styles/styleProduct.css"
 import Offers from "../data/data.json"
 import ButtonLeft from "../assets/arrow-left.png"
 import ButtonRight from "../assets/arrow-right.png"
@@ -56,9 +56,7 @@ if (offer) {
       setCurrentImgIndex(0)
     }
   }
-
-  console.log(offer.pictures.length);
-
+  
   const rating = offer.rating;
 
   // Affichage du rendu visuel dans la fiche logement

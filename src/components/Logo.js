@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/LOGO.png";
-import "../styles/styleHeader.scss";
+import "../styles/styleHeader.css";
 
 // Composant permattant l'affichage du logo
 const Logo = () => {

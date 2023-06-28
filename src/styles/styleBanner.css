@@ -1,31 +1,31 @@
-.BannerContainer {
+.bannerContainer {
   position: relative;
   width: 90%;
   height: 200px;
   margin:0 5%;
 }
-  .BannerContainer img, .BannerContainer h1, .BannerContainer .dark-filter {
+  .bannerContainer img, .bannerContainer h1, .bannerContainer .dark-filter {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%; }
 
-  .BannerContainer img {
+  .bannerContainer img {
     z-index: 0;
-    border-radius: 7px;
+    border-radius: 14px;
     box-shadow: 1px 1px 4px silver;
     object-fit: cover;
 }
 
-  .BannerContainer .dark-filter {
+  .bannerContainer .dark-filter {
     z-index: 1;
-    border-radius: 7px;
+    border-radius: 14px;
     box-shadow: 1px 1px 4px silver;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-  .BannerContainer h1 {
+  .bannerContainer h1 {
     z-index: 2;
     display: flex;
     justify-content: center;
@@ -35,33 +35,29 @@
     font-weight: 100;
   }
 
-  // Responsive with medias queries -------------------------------------------------------
+  /* // Responsive with medias queries ------------------------------------------------------- */
 @media (min-width: 0px) and (max-width: 319px) {
-  .BannerContainer {
+  .bannerContainer {
   height: 80px;
   text-align: start;
-  margin: 0 20 0 20px;
+  margin: 0px 20px 0px 20px;
   max-width: 270px;
 }
 
-  .BannerContainer h1 {
+  .bannerContainer h1 {
     font-size: 18px;
     text-align: start;
     padding-left: 20px;
     font-weight: 100;
   }
-
-  .titleBanner {
-    word-break: break-word;
-  }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .BannerContainer {
+  .bannerContainer {
     height: 100px;
   }
   
-  .BannerContainer h1 {
+  .bannerContainer h1 {
     width: 89px;
     margin-left: 20px;
     font-size: 24px;
@@ -81,35 +77,35 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-   .BannerContainer img {
+   .bannerContainer img {
     z-index: 0;
     border-radius: 15px;
     box-shadow: 1px 1px 4px silver;
     object-fit: cover;
 }
- .BannerContainer .dark-filter {
+ .bannerContainer .dark-filter {
     z-index: 1;
     border-radius: 15px;
     box-shadow: 1px 1px 4px silver;
     background-color: rgba(0, 0, 0, 0.3);
-    
-  .BannerContainer {
-    margin-bottom: 20px;
-  }
 }
 
-.BannerContainer h1 {
+.bannerContainer {
+    margin-bottom: 20px;
+  }
+
+.bannerContainer h1 {
     text-align: center;
   }
 
 }
 
 @media (min-width: 1024px) and (max-width: 5000px) {
-.BannerContainer h1 {
+.bannerContainer h1 {
   text-align: center;
   font-size: 50px;
   }
-.BannerContainer {
+.bannerContainer {
   margin-bottom: 40px;
 }
 }

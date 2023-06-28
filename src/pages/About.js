@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
 import BannerImage from "../assets/picture_aboutPage.png";
-import "../styles/styleProduct.scss";
-import "../styles/styleAbout.scss";
+import "../styles/styleProduct.css";
+import "../styles/styleAbout.css";
 import arrowDown from "../assets/arrow_down.png";
 import arrowUp from "../assets/arrow_up.png";
 
@@ -12,7 +12,6 @@ const About = () => {
   const [isShow2, setIsShow2] = useState(false);
   const [isShow3, setIsShow3] = useState(false);
   const [isShow4, setIsShow4] = useState(false);
-
 
   return (
     <div className="pageContainer">

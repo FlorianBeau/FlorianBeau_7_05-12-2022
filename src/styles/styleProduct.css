@@ -23,7 +23,7 @@ h2 {
   line-height: 25.67px;
   font-weight: 100; }
 
-// Container tags ---------------------------------------------------------------------
+/* // Container tags --------------------------------------------------------------------- */
 .tags {
   color: white;
   background-color: #FF6060;
@@ -46,10 +46,10 @@ h2 {
   flex-wrap: wrap;
 }
 
-// Container slider -------------------------------------------------------------------
+/* // Container slider ------------------------------------------------------------------- */
 
 .sliderContainer {
-  border-radius: 7px;
+  border-radius: 14px;
   box-shadow: 1px 1px 4px silver;
   height: 415px;
   position: relative;
@@ -83,11 +83,11 @@ h2 {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 7px;
+  border-radius: 14px;
   position: absolute;
 }
 
-// Container host -------------------------------------------------------------------
+/* // Container host ------------------------------------------------------------------- */
 
 .containerContentProduct {
   display: flex;
@@ -119,7 +119,7 @@ h2 {
   width: 70px;
 }
 
-// Container stars (avis clients) --------------------------------------------------
+/* // Container stars (avis clients) -------------------------------------------------- */
 .starsContainer {
   display: flex;
 }
@@ -137,7 +137,7 @@ h2 {
   display: flex;
 }
 
-// Container description ----------------------------------------------------------- //
+/* // Container description ----------------------------------------------------------- // */
 .containerDescriptionEquipement {
     text-align: left;
 }
@@ -200,7 +200,7 @@ h2 {
     color: #FFFFFF;
   }
 
-// Responsive with medias queries -------------------------------------------------------
+/* // Responsive with medias queries ------------------------------------------------------- */
 @media (min-width: 0px) and (max-width: 319px) {
   .sliderContainer {
     height: 274px;
@@ -223,6 +223,11 @@ h2 {
 
   .containerDivTags h1 {
     font-size: 23px;
+    font-weight: 100;
+  }
+
+  .containerDivTags h2 {
+    font-size: 17px;
     font-weight: 100;
   }
 
@@ -274,12 +279,16 @@ h2 {
   .div_stars {
     display: flex;
     align-items: center;
+    margin-right: 18px;
   }
 
   .div_stars img {
     display: flex;
     justify-content: flex-end;
     width: 15px;
+  }
+  .authorName {
+    width: 89px;
   }
 }
 
@@ -403,6 +412,12 @@ h2 {
   width: 45%;
 }
 
+.containerContentProduct {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .hostFlex {
   display: flex;
   flex-direction: row-reverse;
@@ -411,17 +426,9 @@ h2 {
 .authorName {
   width: 81px;
 }
-.containerFlexDiv {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    width: 100%;
-  }
 
   .div_stars {
-    display: flex;
-    align-items: center;
-    margin-right: 21px;
+    text-align: end;
+    margin-top: 30px;
   }
 }

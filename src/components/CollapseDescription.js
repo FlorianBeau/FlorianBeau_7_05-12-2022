@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Offers from "../data/data.json"
-import "../styles/styleProduct.scss"
+import "../styles/styleProduct.css"
 import arrowDown from "../assets/arrow_down.png"
 import arrowUp from "../assets/arrow_up.png"
 import { useParams } from "react-router-dom"

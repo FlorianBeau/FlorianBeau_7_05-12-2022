@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import "../styles/styleError404.scss"
+import "../styles/styleError404.css"
 
 // Composant permettant d'afficher le composant Header, ainsi que la phrase
 // indiquant l'erreur.
